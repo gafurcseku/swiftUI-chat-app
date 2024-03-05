@@ -3,7 +3,7 @@
 //  SwiftUI-Chat-App
 //
 //  Created by Md Abdul Gafur on 5/3/24.
-//
+//PT Sans ["PTSans-Regular", "PTSans-Bold"]
 
 import SwiftUI
 import SwiftyBeaver
@@ -17,7 +17,7 @@ struct SwiftUI_Chat_AppApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            DashBoardUIView()
         }
     }
 }
@@ -29,6 +29,11 @@ class AppDelegate: NSObject , UIApplicationDelegate {
     }
     #endif
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        
+        UIFont.familyNames.forEach({ familyName in
+            let fontNames = UIFont.fontNames(forFamilyName: familyName)
+            print(familyName, fontNames)
+        })
         
         let console = ConsoleDestination()
         console.format = "$DHH:mm:ss$d $L $M $J"

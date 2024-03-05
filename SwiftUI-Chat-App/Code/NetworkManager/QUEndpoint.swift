@@ -8,6 +8,8 @@
 import Foundation
 import Alamofire
 
+ let baseUrl = "https://backend.ohodating.com/api/"
+
 protocol ChatAppEndpoint {
     var method:HTTPMethod { get }
     var path:String { get }
