@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-SwiftUI-Chat-App/Pods-SwiftUI-Chat-App-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/AlamofireEasyLogger/AlamofireEasyLogger.framework
+${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework
