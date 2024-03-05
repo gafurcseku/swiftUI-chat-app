@@ -11,6 +11,9 @@
 		0942E6962B96C1180069D3B3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E6952B96C1180069D3B3 /* ContentView.swift */; };
 		0942E6982B96C1190069D3B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0942E6972B96C1190069D3B3 /* Assets.xcassets */; };
 		0942E69B2B96C1190069D3B3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0942E69A2B96C1190069D3B3 /* Preview Assets.xcassets */; };
+		0942E6A52B96C5A50069D3B3 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E6A32B96C5A50069D3B3 /* APIClient.swift */; };
+		0942E6A62B96C5A50069D3B3 /* QUEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E6A42B96C5A50069D3B3 /* QUEndpoint.swift */; };
+		0942E6A92B96C62A0069D3B3 /* ApplicationUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E6A82B96C62A0069D3B3 /* ApplicationUserDefault.swift */; };
 		9562CE652C26F51D1944E73D /* Pods_SwiftUI_Chat_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70A84B46E838235632E0634 /* Pods_SwiftUI_Chat_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -20,6 +23,9 @@
 		0942E6952B96C1180069D3B3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0942E6972B96C1190069D3B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0942E69A2B96C1190069D3B3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0942E6A32B96C5A50069D3B3 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		0942E6A42B96C5A50069D3B3 /* QUEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QUEndpoint.swift; sourceTree = "<group>"; };
+		0942E6A82B96C62A0069D3B3 /* ApplicationUserDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationUserDefault.swift; sourceTree = "<group>"; };
 		153C699F0282F6B7EFF850AE /* Pods-SwiftUI-Chat-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUI-Chat-App.release.xcconfig"; path = "Target Support Files/Pods-SwiftUI-Chat-App/Pods-SwiftUI-Chat-App.release.xcconfig"; sourceTree = "<group>"; };
 		A166B6B80A439E3F856C824D /* Pods-SwiftUI-Chat-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUI-Chat-App.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUI-Chat-App/Pods-SwiftUI-Chat-App.debug.xcconfig"; sourceTree = "<group>"; };
 		A70A84B46E838235632E0634 /* Pods_SwiftUI_Chat_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUI_Chat_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,6 +64,7 @@
 		0942E6922B96C1180069D3B3 /* SwiftUI-Chat-App */ = {
 			isa = PBXGroup;
 			children = (
+				0942E6A12B96C48D0069D3B3 /* Application */,
 				0942E6932B96C1180069D3B3 /* SwiftUI_Chat_AppApp.swift */,
 				0942E6952B96C1180069D3B3 /* ContentView.swift */,
 				0942E6972B96C1190069D3B3 /* Assets.xcassets */,
@@ -74,6 +81,32 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		0942E6A12B96C48D0069D3B3 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				0942E6A72B96C6040069D3B3 /* UserDefault */,
+				0942E6A22B96C5860069D3B3 /* NetworkManager */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		0942E6A22B96C5860069D3B3 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				0942E6A32B96C5A50069D3B3 /* APIClient.swift */,
+				0942E6A42B96C5A50069D3B3 /* QUEndpoint.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		0942E6A72B96C6040069D3B3 /* UserDefault */ = {
+			isa = PBXGroup;
+			children = (
+				0942E6A82B96C62A0069D3B3 /* ApplicationUserDefault.swift */,
+			);
+			path = UserDefault;
+			sourceTree = "<group>";
+		};
 		43C60242A9D537FA3B606E52 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,7 +121,6 @@
 				A166B6B80A439E3F856C824D /* Pods-SwiftUI-Chat-App.debug.xcconfig */,
 				153C699F0282F6B7EFF850AE /* Pods-SwiftUI-Chat-App.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -208,6 +240,9 @@
 			files = (
 				0942E6962B96C1180069D3B3 /* ContentView.swift in Sources */,
 				0942E6942B96C1180069D3B3 /* SwiftUI_Chat_AppApp.swift in Sources */,
+				0942E6A92B96C62A0069D3B3 /* ApplicationUserDefault.swift in Sources */,
+				0942E6A62B96C5A50069D3B3 /* QUEndpoint.swift in Sources */,
+				0942E6A52B96C5A50069D3B3 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,7 +286,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;

@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (5.8.1)
+  - Alamofire (5.9.0)
   - AlamofireEasyLogger (1.6.0):
     - Alamofire (>= 5.0)
   - SwiftyBeaver (2.0.0)
@@ -16,7 +16,7 @@ SPEC REPOS:
     - SwiftyBeaver
 
 SPEC CHECKSUMS:
-  Alamofire: 3ca42e259043ee0dc5c0cdd76c4bc568b8e42af7
+  Alamofire: 02b772c9910e8eba1a079227c32fbd9e46c90a24
   AlamofireEasyLogger: f2fd10b57d973593a79a4b61f274c6a5cb3e1333
   SwiftyBeaver: 014b0c12065026b731bac80305294f27d63e27f6
 
