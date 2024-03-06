@@ -1,10 +1,3 @@
-//
-//  APIClient.swift
-//  Qurais
-//
-//  Created by Md Abdul Gafur on 2/8/23.
-//
-
 import Foundation
 import Alamofire
 
@@ -28,6 +21,7 @@ public enum Result<T> {
 }
 
 typealias CompletionHandler<T> = (Result<T>) -> ()
+typealias ResponseHandler<T> = (Response<T>) -> ()
 typealias CompletionHandlerWithHeaders<T> = (Result<T>, [AnyHashable : Any]?) -> ()
 
 public typealias ErrorResponse = (Int, Data?, Error)

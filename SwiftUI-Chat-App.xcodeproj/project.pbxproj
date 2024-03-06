@@ -18,11 +18,16 @@
 		0942E6B72B979B9B0069D3B3 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E6B62B979B9B0069D3B3 /* AppTheme.swift */; };
 		0942E6BB2B979DA40069D3B3 /* DashBoardUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E6BA2B979DA40069D3B3 /* DashBoardUIView.swift */; };
 		0942E6BE2B97A1F00069D3B3 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E6BD2B97A1F00069D3B3 /* BaseViewModel.swift */; };
-		0942E6C02B97A2790069D3B3 /* ChatRoomsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E6BF2B97A2790069D3B3 /* ChatRoomsViewModel.swift */; };
 		0942E6C22B97A2D20069D3B3 /* ChatRoomsAPIEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E6C12B97A2D20069D3B3 /* ChatRoomsAPIEndPoint.swift */; };
 		0942E6C42B97A6570069D3B3 /* PersonRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E6C32B97A6570069D3B3 /* PersonRowView.swift */; };
 		0942E6CD2B97ABD40069D3B3 /* PTSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0942E6CB2B97ABD40069D3B3 /* PTSans-Regular.ttf */; };
 		0942E6CE2B97ABD40069D3B3 /* PTSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0942E6CC2B97ABD40069D3B3 /* PTSans-Bold.ttf */; };
+		0942E6D02B9809800069D3B3 /* ChatTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E6CF2B9809800069D3B3 /* ChatTextView.swift */; };
+		0942E6D22B981E370069D3B3 /* Rooms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E6D12B981E370069D3B3 /* Rooms.swift */; };
+		0942E6D42B981E4E0069D3B3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E6D32B981E4E0069D3B3 /* User.swift */; };
+		0942E6D62B981F1A0069D3B3 /* RoomsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E6D52B981F1A0069D3B3 /* RoomsData.swift */; };
+		0942E6D82B981FE00069D3B3 /* ChatRoomsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E6D72B981FE00069D3B3 /* ChatRoomsService.swift */; };
+		0942E6DA2B982A040069D3B3 /* ChatRoomViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E6D92B982A040069D3B3 /* ChatRoomViewModels.swift */; };
 		9562CE652C26F51D1944E73D /* Pods_SwiftUI_Chat_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70A84B46E838235632E0634 /* Pods_SwiftUI_Chat_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,12 +44,17 @@
 		0942E6B62B979B9B0069D3B3 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
 		0942E6BA2B979DA40069D3B3 /* DashBoardUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardUIView.swift; sourceTree = "<group>"; };
 		0942E6BD2B97A1F00069D3B3 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
-		0942E6BF2B97A2790069D3B3 /* ChatRoomsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomsViewModel.swift; sourceTree = "<group>"; };
 		0942E6C12B97A2D20069D3B3 /* ChatRoomsAPIEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomsAPIEndPoint.swift; sourceTree = "<group>"; };
 		0942E6C32B97A6570069D3B3 /* PersonRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRowView.swift; sourceTree = "<group>"; };
 		0942E6C82B97A9AD0069D3B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0942E6CB2B97ABD40069D3B3 /* PTSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PTSans-Regular.ttf"; sourceTree = "<group>"; };
 		0942E6CC2B97ABD40069D3B3 /* PTSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PTSans-Bold.ttf"; sourceTree = "<group>"; };
+		0942E6CF2B9809800069D3B3 /* ChatTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTextView.swift; sourceTree = "<group>"; };
+		0942E6D12B981E370069D3B3 /* Rooms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rooms.swift; sourceTree = "<group>"; };
+		0942E6D32B981E4E0069D3B3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0942E6D52B981F1A0069D3B3 /* RoomsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsData.swift; sourceTree = "<group>"; };
+		0942E6D72B981FE00069D3B3 /* ChatRoomsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomsService.swift; sourceTree = "<group>"; };
+		0942E6D92B982A040069D3B3 /* ChatRoomViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomViewModels.swift; sourceTree = "<group>"; };
 		153C699F0282F6B7EFF850AE /* Pods-SwiftUI-Chat-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUI-Chat-App.release.xcconfig"; path = "Target Support Files/Pods-SwiftUI-Chat-App/Pods-SwiftUI-Chat-App.release.xcconfig"; sourceTree = "<group>"; };
 		A166B6B80A439E3F856C824D /* Pods-SwiftUI-Chat-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUI-Chat-App.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUI-Chat-App/Pods-SwiftUI-Chat-App.debug.xcconfig"; sourceTree = "<group>"; };
 		A70A84B46E838235632E0634 /* Pods_SwiftUI_Chat_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUI_Chat_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,6 +172,9 @@
 		0942E6AD2B977DBD0069D3B3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0942E6D12B981E370069D3B3 /* Rooms.swift */,
+				0942E6D32B981E4E0069D3B3 /* User.swift */,
+				0942E6D52B981F1A0069D3B3 /* RoomsData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -169,7 +182,7 @@
 		0942E6AE2B977DC90069D3B3 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				0942E6BF2B97A2790069D3B3 /* ChatRoomsViewModel.swift */,
+				0942E6D92B982A040069D3B3 /* ChatRoomViewModels.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -188,6 +201,7 @@
 		0942E6B02B977EC00069D3B3 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				0942E6CF2B9809800069D3B3 /* ChatTextView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -196,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				0942E6C12B97A2D20069D3B3 /* ChatRoomsAPIEndPoint.swift */,
+				0942E6D72B981FE00069D3B3 /* ChatRoomsService.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -385,14 +400,19 @@
 				0942E6BB2B979DA40069D3B3 /* DashBoardUIView.swift in Sources */,
 				0942E6962B96C1180069D3B3 /* ContentView.swift in Sources */,
 				0942E6C22B97A2D20069D3B3 /* ChatRoomsAPIEndPoint.swift in Sources */,
+				0942E6D82B981FE00069D3B3 /* ChatRoomsService.swift in Sources */,
+				0942E6D62B981F1A0069D3B3 /* RoomsData.swift in Sources */,
 				0942E6C42B97A6570069D3B3 /* PersonRowView.swift in Sources */,
 				0942E6942B96C1180069D3B3 /* SwiftUI_Chat_AppApp.swift in Sources */,
 				0942E6A92B96C62A0069D3B3 /* ApplicationUserDefault.swift in Sources */,
-				0942E6C02B97A2790069D3B3 /* ChatRoomsViewModel.swift in Sources */,
+				0942E6D42B981E4E0069D3B3 /* User.swift in Sources */,
+				0942E6DA2B982A040069D3B3 /* ChatRoomViewModels.swift in Sources */,
+				0942E6D22B981E370069D3B3 /* Rooms.swift in Sources */,
 				0942E6BE2B97A1F00069D3B3 /* BaseViewModel.swift in Sources */,
 				0942E6A62B96C5A50069D3B3 /* QUEndpoint.swift in Sources */,
 				0942E6A52B96C5A50069D3B3 /* APIClient.swift in Sources */,
 				0942E6B52B978A3E0069D3B3 /* HomeUIView.swift in Sources */,
+				0942E6D02B9809800069D3B3 /* ChatTextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

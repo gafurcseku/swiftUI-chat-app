@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeUIView: View {
+    private let viewModel = ChatRoomsViewModels()
     var body: some View {
        Text("")
     }

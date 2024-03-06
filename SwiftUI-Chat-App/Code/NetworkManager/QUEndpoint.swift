@@ -1,10 +1,3 @@
-//
-//  QUEndpoint.swift
-//  Qurais
-//
-//  Created by Md Abdul Gafur on 2/8/23.
-//
-
 import Foundation
 import Alamofire
 
@@ -30,13 +23,8 @@ extension ChatAppEndpoint {
     
     var headers: HTTPHeaders {
         get {
-            let accesToken:String = ApplicationUserDefault.getString(key: USER_TOKEN)
-            if accesToken.isEmpty { return HTTPHeaders.default } else {
-                let token = "Bearer " + accesToken
-                return ["Authorization" :  token]
-                
-//                return ["Authorization" :  token, "deviceType":"iOS","deviceId":"Helper.deviceID" , "appVersion": "Helper.appVersion","deviceName":"Helper.getDeviceName","Content-type": "multipart/form-data", "Content-Disposition" : "form-data"]
-            }
+            let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTAzMTM2MjksImlhdCI6MTcwOTQ0OTYyOSwic3ViIjo0NjIsInVzZXJfdHlwZSI6Im9obyJ9.-1_K9LobxzyUkc9qgxmaBommiOzTr7ewKUyZ15er79g"
+            return ["Authorization" :  token]
         }
         set{}
     }
