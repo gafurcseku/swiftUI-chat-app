@@ -57,6 +57,3 @@ public struct ShimmerModifier: ViewModifier {
     }
 }
 
-#Preview {
-    ShimmerModifier()
-}

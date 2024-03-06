@@ -12,9 +12,10 @@ class ChatRoomViewModels : BaseViewModel {
     @Published var users:[User] = []
     
     func getRoomUser() {
-        ChatRoomsService.shared.getRooms { result in
+        ChatRoomsService().getRooms { result in
             switch result {
             case .success(let users):
+                print(users)
                 self.users = users
             case .failure(let errorMessage, let errorCode):
                 break

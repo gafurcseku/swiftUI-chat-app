@@ -9,10 +9,15 @@ import SwiftUI
 
 public extension Font {
     enum CustomFont:String {
-        case same = "value"
+        case PTSansRegular = "PTSans-Regular"
+        case PTSansBold = "PTSans-Bold"
     }
     
-    static func nameSemibold(ofSize size: CGFloat) -> Font {
-        .custom(CustomFont.same.rawValue, size: size)
+    static func PTSansRegular(ofSize size: CGFloat) -> Font {
+        .custom(CustomFont.PTSansRegular.rawValue, size: size)
+    }
+    
+    static func PTSansBold(ofSize size: CGFloat) -> Font {
+        .custom(CustomFont.PTSansBold.rawValue, size: size)
     }
 }

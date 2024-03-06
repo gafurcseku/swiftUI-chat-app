@@ -8,32 +8,28 @@
 import SwiftUI
 
 struct PersonRowView: View {
+    var person:User
     var body: some View {
         HStack {
-                   Image("person.image")
-                       .resizable()
-                       .aspectRatio(contentMode: .fill)
-                       .frame(width: 50, height: 50)
-                       .clipShape(Circle())
-                       .padding()
-
-                   VStack(alignment: .leading) {
-                       Text("person.name")
-                           .font(.custom("PTSans-Regular", size: 16))
-                           .foregroundColor(.black)
-                           .padding(.bottom, 5)
-
-                       Text("person.lastMessage")
-                           .font(.custom("PTSans-Regular", size: 16)) 
-                           .foregroundColor(.gray)
-                   }
-
-                   Spacer()
-               }
-               .padding(.vertical, 8)
+            RemoteImage(url: URL(string: person.getProfilePhoto))
+                .frame(width: 100,height: 100)
+            
+            VStack(alignment: .leading) {
+                Text(person.getFullName)
+                    .modifier(PTSansRegularTextModifier())
+                    .padding(.bottom, 5)
+                
+                Text(person.getLastMessage)
+                    .modifier(PTSansBoldTextModifier())
+                    .lineLimit(1)
+            }
+            
+            Spacer()
+        }
+        .padding(.vertical, 8)
     }
 }
 
-#Preview {
-    PersonRowView()
-}
+//#Preview {
+//    PersonRowView(person: <#User#>)
+//}

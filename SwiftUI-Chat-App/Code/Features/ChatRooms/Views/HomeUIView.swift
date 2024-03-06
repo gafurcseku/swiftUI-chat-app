@@ -8,9 +8,21 @@
 import SwiftUI
 
 struct HomeUIView: View {
-    private let viewModel = ChatRoomsViewModels()
+    @StateObject private var viewModel = ChatRoomViewModels()
     var body: some View {
-       Text("")
+        VStack{
+            ScrollView(.vertical,showsIndicators: false) {
+                ForEach(0..<viewModel.users.count, id: \.self){ index in
+                    let person = viewModel.users[index]
+                    NavigationLink(destination: ChatRoomsDetailsView(person: person)){
+                        PersonRowView(person: person)
+                    }
+                }
+            }
+        }
+        .onAppear{
+            viewModel.getRoomUser()
+        }
     }
 }
 

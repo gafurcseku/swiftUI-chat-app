@@ -16,21 +16,21 @@ public struct Shimmer {
 
         public var body: some View {
             Rectangle()
-                .foregroundColor(theme.colors.secondarySurface)
+                .foregroundColor(Color(ColorSet.colorDDDDDD.rawValue))
                 .modifier(ShimmerModifier())
         }
     }
 
     public struct Card: View {
-        @EnvironmentObject var theme: GLTheme
+//        @EnvironmentObject var theme: GLTheme
 
         public init() {}
 
         public var body: some View {
             Rectangle()
-                .foregroundColor(theme.colors.secondarySurface)
+                .foregroundColor(Color(ColorSet.colorDDDDDD.rawValue))
                 .modifier(ShimmerModifier())
-                .modifier(GLShapeViewModifier(shape: theme.shapes.cards.defaultCard))
+                //.modifier(GLShapeViewModifier(shape: theme.shapes.cards.defaultCard))
         }
     }
 
@@ -43,7 +43,7 @@ public struct Shimmer {
             case xl = 88
         }
 
-        @EnvironmentObject var theme: GLTheme
+       /// @EnvironmentObject var theme: GLTheme
 
         public var size: Size
 
@@ -54,14 +54,14 @@ public struct Shimmer {
         public var body: some View {
             Circle()
                 .frame(width: size.rawValue, height: size.rawValue)
-                .foregroundColor(theme.colors.secondarySurface)
+                .foregroundColor(Color(ColorSet.colorDDDDDD.rawValue))
                 .modifier(ShimmerModifier())
-                .modifier(GLShapeViewModifier(shape: theme.shapes.cards.elevated))
+               // .modifier(GLShapeViewModifier(shape: theme.shapes.cards.elevated))
         }
     }
 }
 
 
 #Preview {
-    Shimmer()
+    Shimmer.Generic()
 }

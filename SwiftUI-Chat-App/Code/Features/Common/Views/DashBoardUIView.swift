@@ -9,31 +9,33 @@ import SwiftUI
 
 struct DashBoardUIView: View {
     var body: some View {
-        TabView {
-            HomeUIView()
-                .tabItem {
-                    Label("Home", image: "home_bottom")
-                }
-            
-            Text("Home")
-                .tabItem {
-                    Label("", image: "favorite_bottom_icon")
-                }
-            
-            Text("Home")
-                .tabItem {
-                    Label("", image: "person_bottom_icon")
-                }
-            Text("Home")
-                .tabItem {
-                    Label("", image: "message_bottom_icon")
-                }
-            Text("Home")
-                .tabItem {
-                    Label("", image: "more_bottom_icon")
-                }
+        NavigationStack {
+            TabView {
+                HomeUIView()
+                    .tabItem {
+                        Label("Home", image: "home_bottom")
+                    }
+                
+                Text("Home")
+                    .tabItem {
+                        Label("", image: "favorite_bottom_icon")
+                    }
+                
+                Text("Home")
+                    .tabItem {
+                        Label("", image: "person_bottom_icon")
+                    }
+                Text("Home")
+                    .tabItem {
+                        Label("", image: "message_bottom_icon")
+                    }
+                Text("Home")
+                    .tabItem {
+                        Label("", image: "more_bottom_icon")
+                    }
+            }
+            .accentColor(Color(ColorSet.colorB42254.rawValue))
         }
-        .accentColor(Color(ColorSet.colorB42254.rawValue))
     }
 }
 

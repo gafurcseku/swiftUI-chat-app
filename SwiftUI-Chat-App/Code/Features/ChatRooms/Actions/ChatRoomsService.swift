@@ -8,17 +8,7 @@
 import Foundation
 
 class ChatRoomsService {
-    
-    private static var privateShared : ChatRoomsService?
-    
-    class var shared: ChatRoomsService {
-        guard let uwShare = privateShared else {
-            privateShared = ChatRoomsService()
-            return privateShared ?? ChatRoomsService()
-        }
-        return uwShare
-    }
-    
+        
     func getRooms(completion: @escaping ResponseHandler<[User]>){
         APIClient.shared.objectAPICall(apiEndPoint: ChatRoomsAPIEndPoint.Chat_Rooms, modelType: Rooms.self) { result in
             switch result {

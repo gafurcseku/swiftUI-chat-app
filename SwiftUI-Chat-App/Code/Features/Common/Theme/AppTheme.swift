@@ -5,8 +5,9 @@
 //  Created by Md Abdul Gafur on 6/3/24.
 //
 
-import Foundation
+import SwiftUI
 
 enum ColorSet: String {
     case colorB42254 = "B42254"
+    case colorDDDDDD = "DDDDDD"
 }

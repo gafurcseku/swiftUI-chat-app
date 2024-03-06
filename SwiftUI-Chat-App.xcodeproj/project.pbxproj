@@ -28,12 +28,22 @@
 		0942E6D62B981F1A0069D3B3 /* RoomsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E6D52B981F1A0069D3B3 /* RoomsData.swift */; };
 		0942E6D82B981FE00069D3B3 /* ChatRoomsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E6D72B981FE00069D3B3 /* ChatRoomsService.swift */; };
 		0942E6DA2B982A040069D3B3 /* ChatRoomViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E6D92B982A040069D3B3 /* ChatRoomViewModels.swift */; };
+		0942E6DC2B98DFBE0069D3B3 /* Text+ViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E6DB2B98DFBE0069D3B3 /* Text+ViewModifier.swift */; };
+		0942E6E02B98E7100069D3B3 /* ChatRoomsDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E6DF2B98E7100069D3B3 /* ChatRoomsDetailsView.swift */; };
+		0942E6E62B98EC7A0069D3B3 /* ChatRoomsDetailsAPIEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E6E52B98EC7A0069D3B3 /* ChatRoomsDetailsAPIEndPoint.swift */; };
+		0942E6E82B98ED970069D3B3 /* ChatRoomsDetailsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E6E72B98ED970069D3B3 /* ChatRoomsDetailsService.swift */; };
+		0942E6EA2B98EEC50069D3B3 /* Historys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E6E92B98EEC50069D3B3 /* Historys.swift */; };
+		0942E6EC2B98EED40069D3B3 /* HistoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E6EB2B98EED40069D3B3 /* HistoryData.swift */; };
+		0942E6EE2B98EEE40069D3B3 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E6ED2B98EEE40069D3B3 /* Messages.swift */; };
+		0942E6F02B98F0A30069D3B3 /* ChatRoomDetailsViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E6EF2B98F0A30069D3B3 /* ChatRoomDetailsViewModels.swift */; };
+		0942E6F72B98FAC20069D3B3 /* QRCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E6F62B98FAC20069D3B3 /* QRCodeView.swift */; };
+		0942E6F92B98FCF40069D3B3 /* QRCodeAPIEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E6F82B98FCF40069D3B3 /* QRCodeAPIEndPoint.swift */; };
+		0942E6FB2B98FD600069D3B3 /* QRCodeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E6FA2B98FD600069D3B3 /* QRCodeService.swift */; };
 		9562CE652C26F51D1944E73D /* Pods_SwiftUI_Chat_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70A84B46E838235632E0634 /* Pods_SwiftUI_Chat_App.framework */; };
 		BC12BCCB2B98A17300FFC824 /* Shimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC12BCCA2B98A17300FFC824 /* Shimmer.swift */; };
 		BC12BCCE2B98A81F00FFC824 /* ShimmerModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC12BCCD2B98A81F00FFC824 /* ShimmerModifier.swift */; };
 		BC12BCD12B98AAE900FFC824 /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC12BCD02B98AAE900FFC824 /* Font+Extensions.swift */; };
-		BC12BCD32B98B24A00FFC824 /* GLRemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC12BCD22B98B24A00FFC824 /* GLRemoteImage.swift */; };
-		BC12BCD52B98B2A400FFC824 /* GLRemoteImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC12BCD42B98B2A400FFC824 /* GLRemoteImageManager.swift */; };
+		BC12BCD32B98B24A00FFC824 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC12BCD22B98B24A00FFC824 /* RemoteImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,14 +70,24 @@
 		0942E6D52B981F1A0069D3B3 /* RoomsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsData.swift; sourceTree = "<group>"; };
 		0942E6D72B981FE00069D3B3 /* ChatRoomsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomsService.swift; sourceTree = "<group>"; };
 		0942E6D92B982A040069D3B3 /* ChatRoomViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomViewModels.swift; sourceTree = "<group>"; };
+		0942E6DB2B98DFBE0069D3B3 /* Text+ViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+ViewModifier.swift"; sourceTree = "<group>"; };
+		0942E6DF2B98E7100069D3B3 /* ChatRoomsDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomsDetailsView.swift; sourceTree = "<group>"; };
+		0942E6E52B98EC7A0069D3B3 /* ChatRoomsDetailsAPIEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomsDetailsAPIEndPoint.swift; sourceTree = "<group>"; };
+		0942E6E72B98ED970069D3B3 /* ChatRoomsDetailsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomsDetailsService.swift; sourceTree = "<group>"; };
+		0942E6E92B98EEC50069D3B3 /* Historys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Historys.swift; sourceTree = "<group>"; };
+		0942E6EB2B98EED40069D3B3 /* HistoryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryData.swift; sourceTree = "<group>"; };
+		0942E6ED2B98EEE40069D3B3 /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
+		0942E6EF2B98F0A30069D3B3 /* ChatRoomDetailsViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomDetailsViewModels.swift; sourceTree = "<group>"; };
+		0942E6F62B98FAC20069D3B3 /* QRCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeView.swift; sourceTree = "<group>"; };
+		0942E6F82B98FCF40069D3B3 /* QRCodeAPIEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeAPIEndPoint.swift; sourceTree = "<group>"; };
+		0942E6FA2B98FD600069D3B3 /* QRCodeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeService.swift; sourceTree = "<group>"; };
 		153C699F0282F6B7EFF850AE /* Pods-SwiftUI-Chat-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUI-Chat-App.release.xcconfig"; path = "Target Support Files/Pods-SwiftUI-Chat-App/Pods-SwiftUI-Chat-App.release.xcconfig"; sourceTree = "<group>"; };
 		A166B6B80A439E3F856C824D /* Pods-SwiftUI-Chat-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUI-Chat-App.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUI-Chat-App/Pods-SwiftUI-Chat-App.debug.xcconfig"; sourceTree = "<group>"; };
 		A70A84B46E838235632E0634 /* Pods_SwiftUI_Chat_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUI_Chat_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC12BCCA2B98A17300FFC824 /* Shimmer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shimmer.swift; sourceTree = "<group>"; };
 		BC12BCCD2B98A81F00FFC824 /* ShimmerModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerModifier.swift; sourceTree = "<group>"; };
 		BC12BCD02B98AAE900FFC824 /* Font+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extensions.swift"; sourceTree = "<group>"; };
-		BC12BCD22B98B24A00FFC824 /* GLRemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLRemoteImage.swift; sourceTree = "<group>"; };
-		BC12BCD42B98B2A400FFC824 /* GLRemoteImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLRemoteImageManager.swift; sourceTree = "<group>"; };
+		BC12BCD22B98B24A00FFC824 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +186,8 @@
 		0942E6AB2B977D8F0069D3B3 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				0942E6F12B98FA700069D3B3 /* QRCode */,
+				0942E6DD2B98E6DA0069D3B3 /* ChatRoomsDetails */,
 				0942E6AF2B977EAB0069D3B3 /* Common */,
 				0942E6AA2B9775D20069D3B3 /* ChatRooms */,
 			);
@@ -215,8 +237,7 @@
 			children = (
 				0942E6CF2B9809800069D3B3 /* ChatTextView.swift */,
 				BC12BCCA2B98A17300FFC824 /* Shimmer.swift */,
-				BC12BCD22B98B24A00FFC824 /* GLRemoteImage.swift */,
-				BC12BCD42B98B2A400FFC824 /* GLRemoteImageManager.swift */,
+				BC12BCD22B98B24A00FFC824 /* RemoteImage.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -278,6 +299,102 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
+		0942E6DD2B98E6DA0069D3B3 /* ChatRoomsDetails */ = {
+			isa = PBXGroup;
+			children = (
+				0942E6E42B98E73D0069D3B3 /* Screens */,
+				0942E6E32B98E7310069D3B3 /* Actions */,
+				0942E6E22B98E7230069D3B3 /* ViewModels */,
+				0942E6E12B98E7170069D3B3 /* Models */,
+				0942E6DE2B98E6F80069D3B3 /* Views */,
+			);
+			path = ChatRoomsDetails;
+			sourceTree = "<group>";
+		};
+		0942E6DE2B98E6F80069D3B3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0942E6DF2B98E7100069D3B3 /* ChatRoomsDetailsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0942E6E12B98E7170069D3B3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0942E6E92B98EEC50069D3B3 /* Historys.swift */,
+				0942E6EB2B98EED40069D3B3 /* HistoryData.swift */,
+				0942E6ED2B98EEE40069D3B3 /* Messages.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0942E6E22B98E7230069D3B3 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				0942E6EF2B98F0A30069D3B3 /* ChatRoomDetailsViewModels.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		0942E6E32B98E7310069D3B3 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				0942E6E52B98EC7A0069D3B3 /* ChatRoomsDetailsAPIEndPoint.swift */,
+				0942E6E72B98ED970069D3B3 /* ChatRoomsDetailsService.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		0942E6E42B98E73D0069D3B3 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		0942E6F12B98FA700069D3B3 /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				0942E6F52B98FA910069D3B3 /* Actions */,
+				0942E6F42B98FA890069D3B3 /* ViewModels */,
+				0942E6F32B98FA830069D3B3 /* Models */,
+				0942E6F22B98FA7A0069D3B3 /* Views */,
+			);
+			path = QRCode;
+			sourceTree = "<group>";
+		};
+		0942E6F22B98FA7A0069D3B3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0942E6F62B98FAC20069D3B3 /* QRCodeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0942E6F32B98FA830069D3B3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0942E6F42B98FA890069D3B3 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		0942E6F52B98FA910069D3B3 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				0942E6F82B98FCF40069D3B3 /* QRCodeAPIEndPoint.swift */,
+				0942E6FA2B98FD600069D3B3 /* QRCodeService.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
 		43C60242A9D537FA3B606E52 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -299,6 +416,7 @@
 			isa = PBXGroup;
 			children = (
 				BC12BCCD2B98A81F00FFC824 /* ShimmerModifier.swift */,
+				0942E6DB2B98DFBE0069D3B3 /* Text+ViewModifier.swift */,
 			);
 			path = ViewModifer;
 			sourceTree = "<group>";
@@ -431,7 +549,7 @@
 				0942E6BB2B979DA40069D3B3 /* DashBoardUIView.swift in Sources */,
 				BC12BCD12B98AAE900FFC824 /* Font+Extensions.swift in Sources */,
 				0942E6962B96C1180069D3B3 /* ContentView.swift in Sources */,
-				BC12BCD52B98B2A400FFC824 /* GLRemoteImageManager.swift in Sources */,
+				0942E6EA2B98EEC50069D3B3 /* Historys.swift in Sources */,
 				0942E6C22B97A2D20069D3B3 /* ChatRoomsAPIEndPoint.swift in Sources */,
 				0942E6D82B981FE00069D3B3 /* ChatRoomsService.swift in Sources */,
 				0942E6D62B981F1A0069D3B3 /* RoomsData.swift in Sources */,
@@ -439,16 +557,26 @@
 				0942E6C42B97A6570069D3B3 /* PersonRowView.swift in Sources */,
 				0942E6942B96C1180069D3B3 /* SwiftUI_Chat_AppApp.swift in Sources */,
 				0942E6A92B96C62A0069D3B3 /* ApplicationUserDefault.swift in Sources */,
+				0942E6F72B98FAC20069D3B3 /* QRCodeView.swift in Sources */,
+				0942E6F02B98F0A30069D3B3 /* ChatRoomDetailsViewModels.swift in Sources */,
 				0942E6D42B981E4E0069D3B3 /* User.swift in Sources */,
 				0942E6DA2B982A040069D3B3 /* ChatRoomViewModels.swift in Sources */,
+				0942E6E82B98ED970069D3B3 /* ChatRoomsDetailsService.swift in Sources */,
+				0942E6F92B98FCF40069D3B3 /* QRCodeAPIEndPoint.swift in Sources */,
 				0942E6D22B981E370069D3B3 /* Rooms.swift in Sources */,
 				0942E6BE2B97A1F00069D3B3 /* BaseViewModel.swift in Sources */,
-				BC12BCD32B98B24A00FFC824 /* GLRemoteImage.swift in Sources */,
+				0942E6EE2B98EEE40069D3B3 /* Messages.swift in Sources */,
+				0942E6EC2B98EED40069D3B3 /* HistoryData.swift in Sources */,
+				BC12BCD32B98B24A00FFC824 /* RemoteImage.swift in Sources */,
 				BC12BCCB2B98A17300FFC824 /* Shimmer.swift in Sources */,
 				0942E6A62B96C5A50069D3B3 /* QUEndpoint.swift in Sources */,
 				0942E6A52B96C5A50069D3B3 /* APIClient.swift in Sources */,
+				0942E6DC2B98DFBE0069D3B3 /* Text+ViewModifier.swift in Sources */,
 				0942E6B52B978A3E0069D3B3 /* HomeUIView.swift in Sources */,
+				0942E6E02B98E7100069D3B3 /* ChatRoomsDetailsView.swift in Sources */,
+				0942E6FB2B98FD600069D3B3 /* QRCodeService.swift in Sources */,
 				0942E6D02B9809800069D3B3 /* ChatTextView.swift in Sources */,
+				0942E6E62B98EC7A0069D3B3 /* ChatRoomsDetailsAPIEndPoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
