@@ -15,5 +15,8 @@ target 'SwiftUI-Chat-App' do
   #Colorful, flexible, lightweight logging
   pod 'SwiftyBeaver'
   
+  #Socket.IO-client for iOS
+  pod 'Socket.IO-Client-Swift', '~> 15.2.0'
+  
   # End of Pods for SwiftUI-Chat-App
 end
