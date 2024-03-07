@@ -51,6 +51,8 @@
 		0942E7122B9A3B670069D3B3 /* AlertReportUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E7112B9A3B670069D3B3 /* AlertReportUserView.swift */; };
 		0942E7142B9A40AB0069D3B3 /* CheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E7132B9A40AB0069D3B3 /* CheckBoxView.swift */; };
 		0942E7162B9A4CB20069D3B3 /* DividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E7152B9A4CB20069D3B3 /* DividerView.swift */; };
+		09B8556B2B9A54550062151E /* SenderRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B8556A2B9A54550062151E /* SenderRow.swift */; };
+		09B8556D2B9A546F0062151E /* ReceiverRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B8556C2B9A546F0062151E /* ReceiverRow.swift */; };
 		9562CE652C26F51D1944E73D /* Pods_SwiftUI_Chat_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70A84B46E838235632E0634 /* Pods_SwiftUI_Chat_App.framework */; };
 		BC12BCCE2B98A81F00FFC824 /* ShimmerModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC12BCCD2B98A81F00FFC824 /* ShimmerModifier.swift */; };
 		BC12BCD12B98AAE900FFC824 /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC12BCD02B98AAE900FFC824 /* Font+Extensions.swift */; };
@@ -104,6 +106,8 @@
 		0942E7112B9A3B670069D3B3 /* AlertReportUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertReportUserView.swift; sourceTree = "<group>"; };
 		0942E7132B9A40AB0069D3B3 /* CheckBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxView.swift; sourceTree = "<group>"; };
 		0942E7152B9A4CB20069D3B3 /* DividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerView.swift; sourceTree = "<group>"; };
+		09B8556A2B9A54550062151E /* SenderRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderRow.swift; sourceTree = "<group>"; };
+		09B8556C2B9A546F0062151E /* ReceiverRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiverRow.swift; sourceTree = "<group>"; };
 		153C699F0282F6B7EFF850AE /* Pods-SwiftUI-Chat-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUI-Chat-App.release.xcconfig"; path = "Target Support Files/Pods-SwiftUI-Chat-App/Pods-SwiftUI-Chat-App.release.xcconfig"; sourceTree = "<group>"; };
 		A166B6B80A439E3F856C824D /* Pods-SwiftUI-Chat-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUI-Chat-App.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUI-Chat-App/Pods-SwiftUI-Chat-App.debug.xcconfig"; sourceTree = "<group>"; };
 		A70A84B46E838235632E0634 /* Pods_SwiftUI_Chat_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUI_Chat_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -371,6 +375,8 @@
 		0942E6E42B98E73D0069D3B3 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				09B8556A2B9A54550062151E /* SenderRow.swift */,
+				09B8556C2B9A546F0062151E /* ReceiverRow.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -621,10 +627,12 @@
 				0942E6942B96C1180069D3B3 /* SwiftUI_Chat_AppApp.swift in Sources */,
 				0942E70E2B9A36D30069D3B3 /* Size.swift in Sources */,
 				0942E6A92B96C62A0069D3B3 /* ApplicationUserDefault.swift in Sources */,
+				09B8556D2B9A546F0062151E /* ReceiverRow.swift in Sources */,
 				0942E6F72B98FAC20069D3B3 /* QRCodeView.swift in Sources */,
 				BC12BCD72B99A5E300FFC824 /* Color+Extensions.swift in Sources */,
 				0942E6F02B98F0A30069D3B3 /* ChatRoomDetailsViewModels.swift in Sources */,
 				0942E6D42B981E4E0069D3B3 /* User.swift in Sources */,
+				09B8556B2B9A54550062151E /* SenderRow.swift in Sources */,
 				0942E6DA2B982A040069D3B3 /* ChatRoomViewModels.swift in Sources */,
 				0942E6E82B98ED970069D3B3 /* ChatRoomsDetailsService.swift in Sources */,
 				0942E6F92B98FCF40069D3B3 /* QRCodeAPIEndPoint.swift in Sources */,

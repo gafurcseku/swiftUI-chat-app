@@ -8,11 +8,20 @@
 import SwiftUI
 
 struct SenderRow: View {
+    var text:String
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text(text)
+            .modifier(PTSansRegularTextModifier(fontSize: 18))
+            .foregroundColor(.white)
+            .padding()
+            .background(
+                LinearGradient(gradient: Gradient(colors: [.colorB42254, .colorFF6FA0]), startPoint: .top, endPoint: .bottom)
+            )
+            .cornerRadius(30)
+            .padding(.leading, 80)
     }
 }
 
 #Preview {
-    SenderRow()
+    SenderRow(text: "Excited for our date tomorrow :D")
 }

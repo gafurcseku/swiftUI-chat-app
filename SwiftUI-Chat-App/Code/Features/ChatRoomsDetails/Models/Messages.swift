@@ -36,3 +36,15 @@ struct Messages : Codable {
     }
 
 }
+
+extension Messages {
+    var getBody:String {
+        guard let body = self.body else { return "" }
+        return body
+    }
+    
+    var getSender:Int {
+        guard let sender = self.sender else { return 0 }
+        return sender
+    }
+}

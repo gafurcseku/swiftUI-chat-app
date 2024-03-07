@@ -5,7 +5,7 @@
 //  Created by Md Abdul Gafur on 7/3/24.
 //
 
-import Foundation
+import SwiftUI
 
 class ChatRoomDetailsViewModels : BaseViewModel {
     
@@ -15,7 +15,7 @@ class ChatRoomDetailsViewModels : BaseViewModel {
         ChatRoomsDetailsService().getHistory(chatId: chatId) { result in
             switch result {
             case .success(let messages):
-                self.messages = messages
+                    self.messages = messages
             case .failure(let errorMessage, let errorCode):
                 break
             }
