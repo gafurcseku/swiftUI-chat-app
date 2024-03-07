@@ -15,7 +15,7 @@ struct RemoteImage: View {
     }
     
     @ViewBuilder
-       private func view(for phase: AsyncImagePhase) -> some View {
+    private func view(for phase: AsyncImagePhase) -> some View {
            switch phase {
            case .empty:
                ProgressView()
