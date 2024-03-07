@@ -11,15 +11,18 @@ struct PersonRowView: View {
     var person:User
     var body: some View {
         HStack {
-            Menu {
-               
-                        Button("First") {  }
-                        Button("Second") {  }
-                   
-            } label: {
+            
                 RemoteImage(url: URL(string: person.getProfilePhoto))
                     .frame(width: 100,height: 100)
-            }
+                    .contextMenu {
+                        Button {
+                            
+                        } label: {
+                            Label("Share Post", systemImage: "flame.fill")
+                        }
+                    }
+            
+            
             VStack(alignment: .leading) {
                 Text(person.getFullName)
                     .modifier(PTSansRegularTextModifier())
@@ -36,6 +39,7 @@ struct PersonRowView: View {
     }
 }
 
-//#Preview {
-//    PersonRowView(person: <#User#>)
-//}
+
+#Preview {
+    HomeUIView()
+}

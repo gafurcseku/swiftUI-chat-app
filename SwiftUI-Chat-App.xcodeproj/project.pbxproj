@@ -48,6 +48,8 @@
 		BC12BCCE2B98A81F00FFC824 /* ShimmerModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC12BCCD2B98A81F00FFC824 /* ShimmerModifier.swift */; };
 		BC12BCD12B98AAE900FFC824 /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC12BCD02B98AAE900FFC824 /* Font+Extensions.swift */; };
 		BC12BCD32B98B24A00FFC824 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC12BCD22B98B24A00FFC824 /* RemoteImage.swift */; };
+		BC12BCD72B99A5E300FFC824 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC12BCD62B99A5E300FFC824 /* Color+Extensions.swift */; };
+		BC42A9CB2B9A06DB001E3DDB /* CustomMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC42A9CA2B9A06DB001E3DDB /* CustomMenuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +98,8 @@
 		BC12BCCD2B98A81F00FFC824 /* ShimmerModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerModifier.swift; sourceTree = "<group>"; };
 		BC12BCD02B98AAE900FFC824 /* Font+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extensions.swift"; sourceTree = "<group>"; };
 		BC12BCD22B98B24A00FFC824 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
+		BC12BCD62B99A5E300FFC824 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		BC42A9CA2B9A06DB001E3DDB /* CustomMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMenuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +250,7 @@
 				0942E6CF2B9809800069D3B3 /* ChatTextView.swift */,
 				BC12BCCA2B98A17300FFC824 /* Shimmer.swift */,
 				BC12BCD22B98B24A00FFC824 /* RemoteImage.swift */,
+				BC42A9CA2B9A06DB001E3DDB /* CustomMenuView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -437,6 +442,7 @@
 			isa = PBXGroup;
 			children = (
 				BC12BCD02B98AAE900FFC824 /* Font+Extensions.swift */,
+				BC12BCD62B99A5E300FFC824 /* Color+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -573,6 +579,7 @@
 				0942E6942B96C1180069D3B3 /* SwiftUI_Chat_AppApp.swift in Sources */,
 				0942E6A92B96C62A0069D3B3 /* ApplicationUserDefault.swift in Sources */,
 				0942E6F72B98FAC20069D3B3 /* QRCodeView.swift in Sources */,
+				BC12BCD72B99A5E300FFC824 /* Color+Extensions.swift in Sources */,
 				0942E6F02B98F0A30069D3B3 /* ChatRoomDetailsViewModels.swift in Sources */,
 				0942E6D42B981E4E0069D3B3 /* User.swift in Sources */,
 				0942E6DA2B982A040069D3B3 /* ChatRoomViewModels.swift in Sources */,
@@ -580,6 +587,7 @@
 				0942E6F92B98FCF40069D3B3 /* QRCodeAPIEndPoint.swift in Sources */,
 				0942E6D22B981E370069D3B3 /* Rooms.swift in Sources */,
 				0942E6BE2B97A1F00069D3B3 /* BaseViewModel.swift in Sources */,
+				BC42A9CB2B9A06DB001E3DDB /* CustomMenuView.swift in Sources */,
 				0942E6EE2B98EEE40069D3B3 /* Messages.swift in Sources */,
 				0942E6EC2B98EED40069D3B3 /* HistoryData.swift in Sources */,
 				BC12BCD32B98B24A00FFC824 /* RemoteImage.swift in Sources */,
@@ -724,9 +732,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI-Chat-App/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "SwiftUI-Chat-App/Info.plist";
@@ -735,6 +744,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -742,6 +752,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.solution24hours.SwiftUI-Chat-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -765,6 +776,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
