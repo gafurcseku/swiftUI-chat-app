@@ -8,34 +8,42 @@
 import SwiftUI
 
 struct QRCodeView: View {
+    @StateObject private var viewModel = QRCodeViewModels()
+    var person:User = .init(id: 94,profile_photo: "https://oho-assets.s3.amazonaws.com/76b555042801437c9bd353debd055a8d")
     var body: some View {
         VStack(alignment: .center){
-            Text("QR Code")
-                .modifier(PTSansBoldTextModifier(fontSize: 35))
             Divider()
             
             VStack(alignment: .center){
-                Text("Mr Khan")
+                Text(person.getFullName)
                     .modifier(PTSansBoldTextModifier())
                 Text("Attendance Code")
                     .modifier(PTSansRegularTextModifier(fontSize: 24))
-                RemoteImage()
-                    .frame(width: 234,height: 234)
-                
+                if let qrCodeDetails = viewModel.qrCodeDetails{
+                    RemoteImage(url: URL(string: qrCodeDetails.getQRCode))
+                        .frame(width: 234,height: 234)
+                }
             }
-            .background(Color(ColorSet.colorDDDDDD.rawValue))
-            .cornerRadius(6)
-            
+            .modifier(Card())
+            .padding(.top, 45)
             Text("This is your private code. Show this to your server so that we can understand you’ve arrived for your date. Thanks.")
-                .modifier(PTSansRegularTextModifier(fontSize: 20))
+                .modifier(PTSansRegularTextModifier(fontSize: 20,textAlignment: .center))
+                .padding(.top,15)
+                .padding([.leading,.trailing], 25)
             Spacer()
+        }
+        .navigationTitle("QR Code")
+        .navigationBarBackButtonHidden(true)
+        .modifier(SurfaceBackGround())
+        .onAppear {
+            viewModel.getQrCodeDetails(chatId: String(person.getID))
         }
         
     }
 }
 
 #Preview {
-    
+    NavigationStack {
         QRCodeView()
-    
+    }
 }
