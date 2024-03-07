@@ -11,9 +11,15 @@ struct PersonRowView: View {
     var person:User
     var body: some View {
         HStack {
-            RemoteImage(url: URL(string: person.getProfilePhoto))
-                .frame(width: 100,height: 100)
-            
+            Menu {
+               
+                        Button("First") {  }
+                        Button("Second") {  }
+                   
+            } label: {
+                RemoteImage(url: URL(string: person.getProfilePhoto))
+                    .frame(width: 100,height: 100)
+            }
             VStack(alignment: .leading) {
                 Text(person.getFullName)
                     .modifier(PTSansRegularTextModifier())
