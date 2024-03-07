@@ -14,7 +14,7 @@ struct ChatRoomsDetailsView: View {
     var body: some View {
         VStack{
             HStack(spacing:16){
-                RemoteImage(url: URL(string: person.getProfilePhoto))
+                RemoteImage.CircleImage(url: URL(string: person.getProfilePhoto))
                     .frame(width: 50,height: 50)
                 Text(person.getFullName)
                     .modifier(PTSansBoldTextModifier(fontSize: 22))

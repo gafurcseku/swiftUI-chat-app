@@ -21,3 +21,8 @@ public extension Font {
         .custom(CustomFont.PTSansBold.rawValue, size: size)
     }
 }
+
+//public enum Size: CGFloat {
+//    case sm = 16
+//    case md = 24
+//}

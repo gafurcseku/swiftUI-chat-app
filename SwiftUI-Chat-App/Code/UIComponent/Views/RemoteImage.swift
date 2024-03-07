@@ -7,34 +7,58 @@
 
 import SwiftUI
 
-struct RemoteImage: View {
-    var url = URL(string: "https://picsum.photos/200")
-    var body: some View {
-        AsyncImage(url: url,content: view)
-            .clipShape(Circle())
+public struct RemoteImage {
+    
+    public  struct CircleImage: View {
+        public var url = URL(string: "https://picsum.photos/200")
+        
+        public init(url:URL? = URL(string: "https://picsum.photos/200")) {
+            self.url = url
+        }
+        
+        public var body: some View {
+            AsyncImage(url: url,content: view)
+                .clipShape(Circle())
+        }
+        
     }
     
-    @ViewBuilder
-    private func view(for phase: AsyncImagePhase) -> some View {
-           switch phase {
-           case .empty:
-               ProgressView()
-           case .success(let image):
-               image
-                   .resizable()
-                   .aspectRatio(contentMode: .fit)
-           case .failure(let error):
-               VStack(spacing: 16) {
-                   Image(systemName: "xmark.octagon.fill")
-                       .foregroundColor(.red)
-               }
-           @unknown default:
-               Text("Unknown")
-                   .foregroundColor(.gray)
-           }
-       }
+    public  struct RectangleImage: View {
+        public var url = URL(string: "https://picsum.photos/200")
+        
+        public init(url:URL? = URL(string: "https://picsum.photos/200")) {
+            self.url = url
+        }
+        
+        public var body: some View {
+            AsyncImage(url: url,content: view)
+                .clipShape(Rectangle())
+        }
+        
+    }
+    
 }
 
+@ViewBuilder
+private func view(for phase: AsyncImagePhase) -> some View {
+       switch phase {
+       case .empty:
+           ProgressView()
+       case .success(let image):
+           image
+               .resizable()
+               .aspectRatio(contentMode: .fit)
+       case .failure(let error):
+           VStack(spacing: 16) {
+               Image(systemName: "xmark.octagon.fill")
+                   .foregroundColor(.red)
+           }
+       @unknown default:
+           Text("Unknown")
+               .foregroundColor(.gray)
+       }
+   }
+
 #Preview {
-    RemoteImage()
+    RemoteImage.CircleImage()
 }

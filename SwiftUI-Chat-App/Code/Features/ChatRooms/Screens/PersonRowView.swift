@@ -9,33 +9,53 @@ import SwiftUI
 
 struct PersonRowView: View {
     var person:User
+    var completion: (MenuType) -> ()
     var body: some View {
-        HStack {
-            Menu {
-               
-                        Button("First") {  }
-                        Button("Second") {  }
-                   
-            } label: {
-                RemoteImage(url: URL(string: person.getProfilePhoto))
-                    .frame(width: 100,height: 100)
-            }
-            VStack(alignment: .leading) {
-                Text(person.getFullName)
-                    .modifier(PTSansRegularTextModifier())
-                    .padding(.bottom, 5)
+        VStack {
+            HStack {
+                RemoteImage.CircleImage(url: URL(string: person.getProfilePhoto))
+                        .frame(width: 60,height: 60)
+                        .contextMenu {
+                            Button {
+                                completion(MenuType.Block)
+                            } label: {
+                                Label("Block", image: "block_icon")
+                            }
+                            Button {
+                                completion(MenuType.Report)
+                            } label: {
+                                Label("Report", image: "report_icon")
+                            }
+                        }
                 
-                Text(person.getLastMessage)
-                    .modifier(PTSansBoldTextModifier())
-                    .lineLimit(1)
+                
+                VStack(alignment: .leading) {
+                    Text(person.getFullName)
+                        .modifier(PTSansRegularTextModifier())
+                        .foregroundColor(.black)
+                        .padding(.bottom, 5)
+                    
+                    Text(person.getLastMessage)
+                        .modifier(PTSansBoldTextModifier())
+                        .foregroundColor(.black)
+                        .lineLimit(1)
+                }
+                
+                Spacer()
             }
-            
-            Spacer()
+            .padding(.vertical, 8)
+            .padding(.horizontal,15)
+            DividerView()
         }
-        .padding(.vertical, 8)
     }
 }
 
-//#Preview {
-//    PersonRowView(person: <#User#>)
-//}
+public enum MenuType {
+    case Report
+    case Block
+}
+
+
+#Preview {
+    HomeUIView()
+}

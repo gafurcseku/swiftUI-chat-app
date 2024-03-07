@@ -48,3 +48,5 @@ class AppDelegate: NSObject , UIApplicationDelegate {
         return true
     }
 }
+
+//public enum GLIcon: String, CaseIterable {

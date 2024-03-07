@@ -20,7 +20,8 @@ struct QRCodeView: View {
                 Text("Attendance Code")
                     .modifier(PTSansRegularTextModifier(fontSize: 24))
                 if let qrCodeDetails = viewModel.qrCodeDetails{
-                    RemoteImage(url: URL(string: qrCodeDetails.getQRCode))
+                    
+                    RemoteImage.RectangleImage(url: URL(string: qrCodeDetails.getQRCode))
                         .frame(width: 234,height: 234)
                 }
             }

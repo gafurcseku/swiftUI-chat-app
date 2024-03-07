@@ -44,11 +44,17 @@
 		0942E7012B995ECB0069D3B3 /* QRCodeViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E7002B995ECB0069D3B3 /* QRCodeViewModels.swift */; };
 		0942E7032B9961020069D3B3 /* SurfaceViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E7022B9961020069D3B3 /* SurfaceViewModifier.swift */; };
 		0942E7082B9A2FCC0069D3B3 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E7072B9A2FCC0069D3B3 /* CustomAlert.swift */; };
+		0942E70B2B9A339C0069D3B3 /* Shimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E7092B9A339C0069D3B3 /* Shimmer.swift */; };
+		0942E70C2B9A339C0069D3B3 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E70A2B9A339C0069D3B3 /* RemoteImage.swift */; };
+		0942E70E2B9A36D30069D3B3 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E70D2B9A36D30069D3B3 /* Size.swift */; };
+		0942E7102B9A3B130069D3B3 /* AlertBlockUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E70F2B9A3B130069D3B3 /* AlertBlockUserView.swift */; };
+		0942E7122B9A3B670069D3B3 /* AlertReportUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E7112B9A3B670069D3B3 /* AlertReportUserView.swift */; };
+		0942E7142B9A40AB0069D3B3 /* CheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E7132B9A40AB0069D3B3 /* CheckBoxView.swift */; };
+		0942E7162B9A4CB20069D3B3 /* DividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E7152B9A4CB20069D3B3 /* DividerView.swift */; };
 		9562CE652C26F51D1944E73D /* Pods_SwiftUI_Chat_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70A84B46E838235632E0634 /* Pods_SwiftUI_Chat_App.framework */; };
-		BC12BCCB2B98A17300FFC824 /* Shimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC12BCCA2B98A17300FFC824 /* Shimmer.swift */; };
 		BC12BCCE2B98A81F00FFC824 /* ShimmerModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC12BCCD2B98A81F00FFC824 /* ShimmerModifier.swift */; };
 		BC12BCD12B98AAE900FFC824 /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC12BCD02B98AAE900FFC824 /* Font+Extensions.swift */; };
-		BC12BCD32B98B24A00FFC824 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC12BCD22B98B24A00FFC824 /* RemoteImage.swift */; };
+		BC12BCD72B99A5E300FFC824 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC12BCD62B99A5E300FFC824 /* Color+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,13 +97,19 @@
 		0942E7002B995ECB0069D3B3 /* QRCodeViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewModels.swift; sourceTree = "<group>"; };
 		0942E7022B9961020069D3B3 /* SurfaceViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfaceViewModifier.swift; sourceTree = "<group>"; };
 		0942E7072B9A2FCC0069D3B3 /* CustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
+		0942E7092B9A339C0069D3B3 /* Shimmer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shimmer.swift; sourceTree = "<group>"; };
+		0942E70A2B9A339C0069D3B3 /* RemoteImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
+		0942E70D2B9A36D30069D3B3 /* Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
+		0942E70F2B9A3B130069D3B3 /* AlertBlockUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertBlockUserView.swift; sourceTree = "<group>"; };
+		0942E7112B9A3B670069D3B3 /* AlertReportUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertReportUserView.swift; sourceTree = "<group>"; };
+		0942E7132B9A40AB0069D3B3 /* CheckBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxView.swift; sourceTree = "<group>"; };
+		0942E7152B9A4CB20069D3B3 /* DividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerView.swift; sourceTree = "<group>"; };
 		153C699F0282F6B7EFF850AE /* Pods-SwiftUI-Chat-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUI-Chat-App.release.xcconfig"; path = "Target Support Files/Pods-SwiftUI-Chat-App/Pods-SwiftUI-Chat-App.release.xcconfig"; sourceTree = "<group>"; };
 		A166B6B80A439E3F856C824D /* Pods-SwiftUI-Chat-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUI-Chat-App.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUI-Chat-App/Pods-SwiftUI-Chat-App.debug.xcconfig"; sourceTree = "<group>"; };
 		A70A84B46E838235632E0634 /* Pods_SwiftUI_Chat_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUI_Chat_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BC12BCCA2B98A17300FFC824 /* Shimmer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shimmer.swift; sourceTree = "<group>"; };
 		BC12BCCD2B98A81F00FFC824 /* ShimmerModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerModifier.swift; sourceTree = "<group>"; };
 		BC12BCD02B98AAE900FFC824 /* Font+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extensions.swift"; sourceTree = "<group>"; };
-		BC12BCD22B98B24A00FFC824 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
+		BC12BCD62B99A5E300FFC824 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -286,6 +298,8 @@
 			isa = PBXGroup;
 			children = (
 				0942E6BA2B979DA40069D3B3 /* DashBoardUIView.swift */,
+				0942E70F2B9A3B130069D3B3 /* AlertBlockUserView.swift */,
+				0942E7112B9A3B670069D3B3 /* AlertReportUserView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -412,6 +426,8 @@
 				0942E7062B9A2FB50069D3B3 /* Alert */,
 				BC12BCCC2B98A80700FFC824 /* ViewModifer */,
 				0942E7052B9A2F660069D3B3 /* Views */,
+				0942E70D2B9A36D30069D3B3 /* Size.swift */,
+				0942E7132B9A40AB0069D3B3 /* CheckBoxView.swift */,
 			);
 			path = UIComponent;
 			sourceTree = "<group>";
@@ -419,8 +435,9 @@
 		0942E7052B9A2F660069D3B3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				BC12BCCA2B98A17300FFC824 /* Shimmer.swift */,
-				BC12BCD22B98B24A00FFC824 /* RemoteImage.swift */,
+				0942E70A2B9A339C0069D3B3 /* RemoteImage.swift */,
+				0942E7092B9A339C0069D3B3 /* Shimmer.swift */,
+				0942E7152B9A4CB20069D3B3 /* DividerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -464,6 +481,7 @@
 			isa = PBXGroup;
 			children = (
 				BC12BCD02B98AAE900FFC824 /* Font+Extensions.swift */,
+				BC12BCD62B99A5E300FFC824 /* Color+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -590,6 +608,8 @@
 				0942E7032B9961020069D3B3 /* SurfaceViewModifier.swift in Sources */,
 				0942E6962B96C1180069D3B3 /* ContentView.swift in Sources */,
 				0942E6FF2B995CF30069D3B3 /* QRCodeDetails.swift in Sources */,
+				0942E7122B9A3B670069D3B3 /* AlertReportUserView.swift in Sources */,
+				0942E70C2B9A339C0069D3B3 /* RemoteImage.swift in Sources */,
 				0942E7082B9A2FCC0069D3B3 /* CustomAlert.swift in Sources */,
 				0942E6EA2B98EEC50069D3B3 /* Historys.swift in Sources */,
 				0942E6FD2B995C140069D3B3 /* QRCode.swift in Sources */,
@@ -599,8 +619,10 @@
 				BC12BCCE2B98A81F00FFC824 /* ShimmerModifier.swift in Sources */,
 				0942E6C42B97A6570069D3B3 /* PersonRowView.swift in Sources */,
 				0942E6942B96C1180069D3B3 /* SwiftUI_Chat_AppApp.swift in Sources */,
+				0942E70E2B9A36D30069D3B3 /* Size.swift in Sources */,
 				0942E6A92B96C62A0069D3B3 /* ApplicationUserDefault.swift in Sources */,
 				0942E6F72B98FAC20069D3B3 /* QRCodeView.swift in Sources */,
+				BC12BCD72B99A5E300FFC824 /* Color+Extensions.swift in Sources */,
 				0942E6F02B98F0A30069D3B3 /* ChatRoomDetailsViewModels.swift in Sources */,
 				0942E6D42B981E4E0069D3B3 /* User.swift in Sources */,
 				0942E6DA2B982A040069D3B3 /* ChatRoomViewModels.swift in Sources */,
@@ -609,16 +631,18 @@
 				0942E6D22B981E370069D3B3 /* Rooms.swift in Sources */,
 				0942E6BE2B97A1F00069D3B3 /* BaseViewModel.swift in Sources */,
 				0942E6EE2B98EEE40069D3B3 /* Messages.swift in Sources */,
+				0942E7102B9A3B130069D3B3 /* AlertBlockUserView.swift in Sources */,
+				0942E7142B9A40AB0069D3B3 /* CheckBoxView.swift in Sources */,
 				0942E6EC2B98EED40069D3B3 /* HistoryData.swift in Sources */,
-				BC12BCD32B98B24A00FFC824 /* RemoteImage.swift in Sources */,
-				BC12BCCB2B98A17300FFC824 /* Shimmer.swift in Sources */,
 				0942E6A62B96C5A50069D3B3 /* QUEndpoint.swift in Sources */,
+				0942E7162B9A4CB20069D3B3 /* DividerView.swift in Sources */,
 				0942E6A52B96C5A50069D3B3 /* APIClient.swift in Sources */,
 				0942E6DC2B98DFBE0069D3B3 /* Text+ViewModifier.swift in Sources */,
 				0942E6B52B978A3E0069D3B3 /* HomeUIView.swift in Sources */,
 				0942E6E02B98E7100069D3B3 /* ChatRoomsDetailsView.swift in Sources */,
 				0942E6FB2B98FD600069D3B3 /* QRCodeService.swift in Sources */,
 				0942E6D02B9809800069D3B3 /* ChatTextView.swift in Sources */,
+				0942E70B2B9A339C0069D3B3 /* Shimmer.swift in Sources */,
 				0942E7012B995ECB0069D3B3 /* QRCodeViewModels.swift in Sources */,
 				0942E6E62B98EC7A0069D3B3 /* ChatRoomsDetailsAPIEndPoint.swift in Sources */,
 			);
@@ -752,9 +776,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI-Chat-App/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "SwiftUI-Chat-App/Info.plist";
@@ -763,6 +788,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -770,6 +796,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.solution24hours.SwiftUI-Chat-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -793,6 +820,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -64,4 +64,5 @@ public struct Shimmer {
 
 #Preview {
     Shimmer.Generic()
+   
 }

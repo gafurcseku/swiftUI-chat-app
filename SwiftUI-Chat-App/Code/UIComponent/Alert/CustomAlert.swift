@@ -7,31 +7,57 @@
 
 import SwiftUI
 
-struct CustomAlert: View {
+struct CustomAlert<Content> : View where Content : View {
+    @Binding var showAlert: Bool
+    var negativeText:String = "CANCEL"
+    var positiveText:String = "OK"
+    
+    @ViewBuilder let content: Content
+    var negativeButtonAction: (() -> ())?
+    var positiveButtonAction: (() -> ())?
     
     var body: some View {
         ZStack {
             Color.black.opacity(0.75)
                 .edgesIgnoringSafeArea(.all)
+                .onTapGesture {
+                    self.showAlert.toggle()
+                }
             VStack(spacing: 0) {
-                Text("alertType.title()")
-                Text("alertType.message()")
-                Divider()
-                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 0.5)
-                    .padding(.all, 0)
-                HStack(spacing: 0) {
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/){
-                        Text("alertType.leftActionText")
+                content
+                HStack(spacing: 21) {
+                    Spacer()
+                    Button(action: {
+                        withAnimation {
+                            self.showAlert.toggle()
+                        }
+                        negativeButtonAction?()
+                    }){
+                        Text(negativeText)
+                            .modifier(PTSansRegularTextModifier(fontSize: 16))
+                            .foregroundColor(.black)
                     }
-                    Divider().frame(minWidth: 0, maxWidth: 0.5, minHeight: 0, maxHeight: .infinity)
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/){
-                        Text("alertType.rightActionText")
+                    
+                    Button(action: {
+                        withAnimation {
+                            self.showAlert.toggle()
+                        }
+                        positiveButtonAction?()
+                    }){
+                        Text(positiveText)
+                            .modifier(PTSansRegularTextModifier(fontSize: 16))
+                            .foregroundColor(.red)
                     }
                 }
-                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 55)
-                .padding([.horizontal, .bottom], 0)
+                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 40)
+                
             }
+            .padding([.leading, .trailing], Padding.p25.rawValue)
+            .padding(.top,Padding.p50.rawValue)
+            .padding(.bottom,Padding.p25.rawValue)
             .background(Color.white)
+            .padding([.leading,.trailing],25)
+            
         }
         .zIndex(2)
     }
@@ -39,5 +65,25 @@ struct CustomAlert: View {
 
 
 #Preview {
-    CustomAlert()
+    CustomAlert(showAlert:.constant(false),positiveText: "BLOCK"){
+        VStack(alignment: .leading,spacing: 15){
+            HStack(spacing:10){
+                Image("block_user_icon")
+                Text("Block User")
+                    .modifier(PTSansBoldTextModifier(fontSize: 30))
+                    .foregroundColor(.black)
+            }
+            HStack(spacing:15){
+                RemoteImage.CircleImage()
+                    .frame(width: 50,height: 50)
+                Text("Susan D. Fairchild")
+                    .modifier(PTSansBoldTextModifier(fontSize: 22))
+                    .foregroundColor(.black)
+            }
+            
+            Text("Are you sure you want to block this user? Once blocked they won’t be able to send you messages and won’t be able to match in future.")
+                .modifier(PTSansRegularTextModifier(fontSize: 16))
+                .foregroundColor(.black)
+        }
+    }
 }
