@@ -12,7 +12,8 @@ struct QRCodeView: View {
     var person:User = .init(id: 94,profile_photo: "https://oho-assets.s3.amazonaws.com/76b555042801437c9bd353debd055a8d")
     var body: some View {
         VStack(alignment: .center){
-            Divider()
+            
+            HeaderTitleView(text: "QR Code")
             
             VStack(alignment: .center){
                 Text(person.getFullName)
@@ -33,7 +34,6 @@ struct QRCodeView: View {
                 .padding([.leading,.trailing], 25)
             Spacer()
         }
-        .navigationTitle("QR Code")
         .navigationBarBackButtonHidden(true)
         .modifier(SurfaceBackGround())
         .onAppear {

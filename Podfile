@@ -16,7 +16,8 @@ target 'SwiftUI-Chat-App' do
   pod 'SwiftyBeaver'
   
   #Socket.IO-client for iOS
-  pod 'Socket.IO-Client-Swift', '~> 15.2.0'
+  pod 'Socket.IO-Client-Swift', '~> 16.0.1'
   
+  pod 'Starscream', '4.0.4'
   # End of Pods for SwiftUI-Chat-App
 end

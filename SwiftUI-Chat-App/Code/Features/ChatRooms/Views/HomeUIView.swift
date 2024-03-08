@@ -13,43 +13,44 @@ struct HomeUIView: View {
     @State var reportAlert = false
    
     var body: some View {
-        VStack(alignment: .leading){
-            Text("Chats")
-                .modifier(PTSansBoldTextModifier(fontSize: 35))
-                .foregroundColor(.black)
-                .padding()
-            DividerView()
-            
-            ScrollView(.vertical,showsIndicators: false) {
-                ForEach(0..<viewModel.users.count, id: \.self){ index in
-                    let person = viewModel.users[index]
-                    NavigationLink(destination: ChatRoomsDetailsView(person: person)){
-                        PersonRowView(person: person) { menuAction in
-                            switch menuAction {
-                            case .Block:
-                                withAnimation {
-                                    self.viewModel.person = person
-                                    self.blockAlert.toggle()
-                                }
-                            case .Report:
-                                withAnimation {
-                                    self.viewModel.person = person
-                                    self.reportAlert.toggle()
+        ZStack{
+            VStack(alignment: .leading){
+                HeaderTitleView(text: "Chats",enableBack: false)
+                ScrollView(.vertical,showsIndicators: false) {
+                    ForEach(0..<viewModel.users.count, id: \.self){ index in
+                        let person = viewModel.users[index]
+                        NavigationLink(destination: ChatRoomsDetailsView(person: person)){
+                            PersonRowView(person: person) { menuAction in
+                                switch menuAction {
+                                case .Block:
+                                    withAnimation(.easeInOut) {
+                                        self.viewModel.person = person
+                                        self.blockAlert.toggle()
+                                    }
+                                case .Report:
+                                    withAnimation(.easeInOut) {
+                                        self.viewModel.person = person
+                                        self.reportAlert.toggle()
+                                    }
                                 }
                             }
                         }
                     }
                 }
             }
-        }
-        .fullScreenCover(isPresented: self.$blockAlert, content: {
-            AlertBlockUserView(blockAlert: self.$blockAlert,person: self.viewModel.person)
-        })
-        .fullScreenCover(isPresented: self.$reportAlert, content: {
-            AlertReportUserView(reportAlert: self.$reportAlert,person: self.viewModel.person)
-        })
+            if(self.blockAlert){
+                withAnimation(.easeInOut) {
+                    AlertBlockUserView(blockAlert: self.$blockAlert,person: self.viewModel.person)
+                }
+            }else if(self.reportAlert){
+                withAnimation(.easeInOut) {
+                    AlertReportUserView(reportAlert: self.$reportAlert,person: self.viewModel.person)
+                }
+            }
+        }.zIndex(2)
         .onAppear{
             viewModel.getRoomUser()
+            SocketClient.shared.socketConnect()
         }
     }
 }

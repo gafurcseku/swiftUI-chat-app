@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ChatRoomsDetailsView: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State private var message: String = ""
     @StateObject private var viewModels = ChatRoomDetailsViewModels()
     var person:User = .init(id: 94,profile_photo: "https://oho-assets.s3.amazonaws.com/76b555042801437c9bd353debd055a8d")
@@ -17,6 +18,9 @@ struct ChatRoomsDetailsView: View {
             HStack(spacing:16){
                 RemoteImage.CircleImage(url: URL(string: person.getProfilePhoto))
                     .frame(width: 50,height: 50)
+                    .onTapGesture {
+                        presentationMode.wrappedValue.dismiss()
+                    }
                 Text(person.getFullName)
                     .modifier(PTSansBoldTextModifier(fontSize: 22))
                 Spacer()
@@ -69,6 +73,7 @@ struct ChatRoomsDetailsView: View {
             .padding(.top,15)
         }
         .modifier(SurfaceBackGround())
+        .navigationBarBackButtonHidden(true)
         .onAppear {
             viewModels.getChatHistory(chatId: String(person.getID))
         }

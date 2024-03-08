@@ -2,15 +2,16 @@ PODS:
   - Alamofire (5.9.0)
   - AlamofireEasyLogger (1.6.0):
     - Alamofire (>= 5.0)
-  - Socket.IO-Client-Swift (15.2.0):
-    - Starscream (~> 3.1)
-  - Starscream (3.1.1)
+  - Socket.IO-Client-Swift (16.0.1):
+    - Starscream (~> 4.0)
+  - Starscream (4.0.4)
   - SwiftyBeaver (2.0.0)
 
 DEPENDENCIES:
   - Alamofire
   - AlamofireEasyLogger
-  - Socket.IO-Client-Swift (~> 15.2.0)
+  - Socket.IO-Client-Swift (~> 16.0.1)
+  - Starscream (= 4.0.4)
   - SwiftyBeaver
 
 SPEC REPOS:
@@ -24,10 +25,10 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 02b772c9910e8eba1a079227c32fbd9e46c90a24
   AlamofireEasyLogger: f2fd10b57d973593a79a4b61f274c6a5cb3e1333
-  Socket.IO-Client-Swift: 1e3e3a1f09f3312a167f0d781eb2f383d477357c
-  Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
+  Socket.IO-Client-Swift: c116d6dc9fd6be9c259bacfe143f8725bce7d79e
+  Starscream: 5178aed56b316f13fa3bc55694e583d35dd414d9
   SwiftyBeaver: 014b0c12065026b731bac80305294f27d63e27f6
 
-PODFILE CHECKSUM: 50b92b21696608f10c4df3f5325773ba986eb39e
+PODFILE CHECKSUM: 19861b45cabdbf720ac33e401aa6588aea497c63
 
-COCOAPODS: 1.12.1
+COCOAPODS: 1.13.0

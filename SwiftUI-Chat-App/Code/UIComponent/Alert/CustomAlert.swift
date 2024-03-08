@@ -18,7 +18,7 @@ struct CustomAlert<Content> : View where Content : View {
     
     var body: some View {
         ZStack {
-            Color.black.opacity(0.75)
+            Color.black.opacity(0.58)
                 .edgesIgnoringSafeArea(.all)
                 .onTapGesture {
                     self.showAlert.toggle()
