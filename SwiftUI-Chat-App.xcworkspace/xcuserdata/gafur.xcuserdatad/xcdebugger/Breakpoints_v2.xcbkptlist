@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "7E9D4E4A-0ADC-43A2-B03D-548C0B7E462A"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AE2F4E85-DB38-416F-A5FF-3D971D098DAE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftUI-Chat-App/Code/SocketIO/SocketClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "sendMessage(chatRoom:message:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "AE2F4E85-DB38-416F-A5FF-3D971D098DAE - 45f00d6f5c7df84"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftUI_Chat_App.SocketClient.sendMessage() -&gt; ()"
+                  moduleName = "SwiftUI-Chat-App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/DATA/iOS/SwiftUI-Chat-App/SwiftUI-Chat-App/Code/SocketIO/SocketClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "1020">
+               </Location>
+               <Location
+                  uuid = "AE2F4E85-DB38-416F-A5FF-3D971D098DAE - ce9f86111586fa4f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;Any&gt;, SocketIO.SocketAckEmitter) -&gt; () in SwiftUI_Chat_App.SocketClient.sendMessage() -&gt; ()"
+                  moduleName = "SwiftUI-Chat-App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/DATA/iOS/SwiftUI-Chat-App/SwiftUI-Chat-App/Code/SocketIO/SocketClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "100">
+               </Location>
+               <Location
+                  uuid = "AE2F4E85-DB38-416F-A5FF-3D971D098DAE - 45f00d6f5c7dfc6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftUI_Chat_App.SocketClient.sendMessage() -&gt; ()"
+                  moduleName = "SwiftUI-Chat-App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/DATA/iOS/SwiftUI-Chat-App/SwiftUI-Chat-App/Code/SocketIO/SocketClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "452">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "74AF5430-BF4C-4036-8576-42D85E28FEC9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftUI-Chat-App/Code/SocketIO/SocketClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "socketConnection(complete:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

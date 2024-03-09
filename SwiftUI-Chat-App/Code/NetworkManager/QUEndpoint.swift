@@ -1,7 +1,7 @@
 import Foundation
 import Alamofire
 
- let baseUrl = "https://backend.ohodating.com/api/"
+ let baseUrl = Bundle.main.infoDictionary?["BaseUrl"] as? String  ?? ""
 
 protocol ChatAppEndpoint {
     var method:HTTPMethod { get }
@@ -23,8 +23,7 @@ extension ChatAppEndpoint {
     
     var headers: HTTPHeaders {
         get {
-            let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTAzMTM2MjksImlhdCI6MTcwOTQ0OTYyOSwic3ViIjo0NjIsInVzZXJfdHlwZSI6Im9obyJ9.-1_K9LobxzyUkc9qgxmaBommiOzTr7ewKUyZ15er79g"
-            return ["Authorization" :  token]
+            return ["Authorization" :  Bundle.main.infoDictionary?["aServiceToken"] as? String  ?? ""]
         }
         set{}
     }

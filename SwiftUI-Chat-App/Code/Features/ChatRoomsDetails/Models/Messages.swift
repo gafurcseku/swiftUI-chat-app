@@ -38,6 +38,11 @@ struct Messages : Codable {
 }
 
 extension Messages {
+    
+    var getId:Int {
+        guard let id = self.id else { return 0 }
+        return id
+    }
     var getBody:String {
         guard let body = self.body else { return "" }
         return body

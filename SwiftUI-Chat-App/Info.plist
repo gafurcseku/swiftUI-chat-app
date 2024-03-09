@@ -2,6 +2,19 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>SocketToken</key>
+	<string>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDg4ODQ5NjcsImlhdCI6MTcwODc5ODU2Nywic3ViIjoxODcsInVzZXJfdHlwZSI6Im9obyJ9.T-5CVp4sL74U_6nK6EJmMoJ54RDgUUs7vD0HYtucrT0</string>
+	<key>ServiceToken</key>
+	<string>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTAzMTM2MjksImlhdCI6MTcwOTQ0OTYyOSwic3ViIjo0NjIsInVzZXJfdHlwZSI6Im9obyJ9.-1_K9LobxzyUkc9qgxmaBommiOzTr7ewKUyZ15er79g</string>
+	<key>SocketUrl</key>
+	<string>https://chat.backend.ohodating.com</string>
+	<key>BaseUrl</key>
+	<string>https://backend.ohodating.com/api/</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>UIAppFonts</key>
 	<array>
 		<string>PTSans-Regular.ttf</string>

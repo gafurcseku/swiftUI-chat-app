@@ -16,6 +16,20 @@ struct HomeUIView: View {
         ZStack{
             VStack(alignment: .leading){
                 HeaderTitleView(text: "Chats",enableBack: false)
+                if(viewModel.chatRoomFail){
+                    VStack(alignment: .center,spacing: 10) {
+                        Image(systemName: "xmark.icloud.fill")
+                            .resizable().frame(width: 50,height: 50)
+                        Text("Unable to load Chat Rooms")
+                            .modifier(PTSansBoldTextModifier(fontSize: 22))
+                        Button(action: { viewModel.getRoomUser() }, label: {
+                            Text("Retry")
+                                .modifier(PTSansBoldTextModifier(fontSize: 24))
+                                .foregroundColor(.black)
+                        })
+                    }
+                    .frame(maxWidth:.infinity,maxHeight:.infinity)
+                }
                 ScrollView(.vertical,showsIndicators: false) {
                     ForEach(0..<viewModel.users.count, id: \.self){ index in
                         let person = viewModel.users[index]
@@ -38,6 +52,7 @@ struct HomeUIView: View {
                     }
                 }
             }
+            .modifier(SurfaceBackGround())
             if(self.blockAlert){
                 withAnimation(.easeInOut) {
                     AlertBlockUserView(blockAlert: self.$blockAlert,person: self.viewModel.person)
@@ -48,9 +63,9 @@ struct HomeUIView: View {
                 }
             }
         }.zIndex(2)
+            
         .onAppear{
             viewModel.getRoomUser()
-            SocketClient.shared.socketConnect()
         }
     }
 }

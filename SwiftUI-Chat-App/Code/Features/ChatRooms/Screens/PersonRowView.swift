@@ -12,9 +12,9 @@ struct PersonRowView: View {
     var completion: (MenuType) -> ()
     var body: some View {
         VStack {
-            HStack {
+            HStack(spacing:22) {
                 RemoteImage.CircleImage(url: URL(string: person.getProfilePhoto))
-                        .frame(width: 60,height: 60)
+                        .frame(width: 100,height: 100)
                         .contextMenu {
                             Button {
                                 completion(MenuType.Block)
@@ -29,14 +29,13 @@ struct PersonRowView: View {
                         }
                 
                 
-                VStack(alignment: .leading) {
+                VStack(alignment: .leading, spacing: 7) {
                     Text(person.getFullName)
-                        .modifier(PTSansRegularTextModifier())
+                        .modifier(PTSansBoldTextModifier(fontSize: 22))
                         .foregroundColor(.black)
-                        .padding(.bottom, 5)
                     
                     Text(person.getLastMessage)
-                        .modifier(PTSansBoldTextModifier())
+                        .modifier(PTSansRegularTextModifier(fontSize: 22))
                         .foregroundColor(.black)
                         .lineLimit(1)
                 }
@@ -44,7 +43,6 @@ struct PersonRowView: View {
                 Spacer()
             }
             .padding(.vertical, 8)
-            .padding(.horizontal,15)
             DividerView()
         }
     }

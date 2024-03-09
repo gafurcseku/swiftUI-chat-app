@@ -8,6 +8,7 @@
 import Foundation
 import SocketIO
 
+let socketUrl = Bundle.main.infoDictionary?["SocketUrl"] as? String  ?? ""
 
 class SocketClient {
     
@@ -21,39 +22,96 @@ class SocketClient {
         return uwShare
     }
     
-    func socketConnect(){
-        let tokenFromAbove = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDg4ODQ5NjcsImlhdCI6MTcwODc5ODU2Nywic3ViIjoxODcsInVzZXJfdHlwZSI6Im9obyJ9.T-5CVp4sL74U_6nK6EJmMoJ54RDgUUs7vD0HYtucrT0"
-        let socketManager = SocketManager(socketURL: URL(string: "https://chat.backend.ohodating.com")!, config: [.log(true), .compress])
-        let socket = socketManager.defaultSocket
-        
-        self.socketManager.config = SocketIOClientConfiguration(
-                    arrayLiteral: .connectParams(["token": tokenFromAbove], .secure(true)
-                )
-                socket.connect()
-       
-        let dict =  [ "token" : tokenFromAbove]
-        
-        socket.connect(withPayload: dict, timeoutAfter: 2) {
-            print("2nd Status \(socket != nil ? String(describing: socket.status) : "Not initialized")")
-            //stream()
+     var socket:SocketIOClient?
+    private var manager:SocketManager?
+    
+    func socketConnection(complete:@escaping (Bool) -> Void){
+        if let socketURL = URL(string: socketUrl) {
+            let config: SocketIOClientConfiguration = [.log(true),.forceWebsockets(true), .secure(true)]
+            manager = SocketManager.init(socketURL: socketURL, config: config)
+            socket = manager?.defaultSocket
+            socket?.on(clientEvent: .connect) { (data, ack) in
+                complete(true)
+            }
+            socket?.on(clientEvent: .disconnect) { (data, ack) in
+               complete(false)
+            }
+            
+            socket?.on(clientEvent: .error) { (data, ack) in
+                if let errorStr: String = (data[0] as? String) {
+                    if errorStr.hasPrefix("ERR_SOCKETIO_INVALID_SESSION") {
+                        self.manager?.disconnect()
+                        print("App Chat: error \(errorStr)")
+                    }
+                }
+            }
+//            
+//            socket?.onAny {
+//                    print("Got event: \($0.event), with items: \(String(describing: $0.items))")
+//                }
+//            let acces = Bundle.main.infoDictionary?["SocketToken"] as? String  ?? ""
+            socket?.connect(withPayload: ["token" : Bundle.main.infoDictionary?["SocketToken"] as? String  ?? ""])
+        }else{
+            complete(false)
         }
-        
-        // Listening for events
-//        socket.on(clientEvent: .connect) {data, ack in
-//            print("socket connected")
-//        }
-//        
-//        socket.on(clientEvent: .error) {data, ack in
-//            print("socket error -- \(data)")
-//        }
-//        
-//       
-//        
-//        socket.emit("da39505a-284c-47c5-af38-4ce54c05e999", "This is Test Message")
-//        
-//        socket.emitWithAck("da39505a-284c-47c5-af38-4ce54c05e999", "This is Test Message").timingOut(after: 5) { data in
-//            print(data)
-//        }
-       
     }
+    
+    func sendMessage(chatRoom:String, message:String) {
+        if let socket = self.socket {
+            if(socket.status == SocketIOStatus.connected) {
+                socket.emit(chatRoom, message)
+//                socket.on("da39505a-284c-47c5-af38-4ce54c05e999", callback: { [weak self] data, ack in
+//                    print("Socket data -\(data[0])")
+//                })
+//                socket.emitWithAck("da39505a-284c-47c5-af38-4ce54c05e999", "iOSMesssage").timingOut(after: 5) {data in
+//                    print("emitWithAck data -\(data)")
+//                }
+//                socket.emitWithAck("private message", ["roomName": "adf110e0-e120-45e1-83be-fbfdec026551", "chat_id": "94"]).timingOut(after: 0) {data in
+//                    print("private emitWithAck data -\(data)")
+//                }
+            }else{
+                print("socket Not Connected")
+            }
+            
+        }else{
+        print("socket null")
+        }
+    }
+    
+    deinit {
+        if let manager = self.manager {
+            manager.disconnect()
+        }
+    }
+    
 }
+
+
+//socket.on(clientEvent: .connect) { (data, ack) in
+//    print("App Chat: socket connected")
+//}
+//
+//socket.on(clientEvent: .disconnect) { (data, ack) in
+//    print("App Chat: Disconnect")
+//}
+//
+//socket.on(clientEvent: .error) { (data, ack) in
+//    if let errorStr: String = (data[0] as? String) {
+//        if errorStr.hasPrefix("ERR_SOCKETIO_INVALID_SESSION") {
+//            manager.disconnect()
+//            print("App Chat: error \(errorStr)")
+//        }
+//    }
+//}
+//
+//socket.on(clientEvent: .reconnect) { (data, ack) in
+//    print("App Chat: reconnect");
+//}
+//
+//socket.on(clientEvent: .reconnectAttempt) { (data, ack) in
+//    print("App Chat: reconnectAttempt");
+//}
+//
+//socket.on("message") {data, ack in
+//    print("App Chat: Message Received\(data)")
+//}

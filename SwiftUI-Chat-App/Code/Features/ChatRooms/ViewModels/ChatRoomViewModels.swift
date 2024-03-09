@@ -11,6 +11,7 @@ import SwiftUI
 class ChatRoomViewModels : BaseViewModel {
     
     @Published var users:[User] = []
+    @Published var chatRoomFail:Bool = false
     var person:User = .init()
     
     func getRoomUser() {
@@ -20,8 +21,8 @@ class ChatRoomViewModels : BaseViewModel {
                 withAnimation {
                     self.users = users
                 }
-            case .failure(let errorMessage, let errorCode):
-                break
+            case .failure(_, _):
+                self.chatRoomFail = true
             }
         }
     }
