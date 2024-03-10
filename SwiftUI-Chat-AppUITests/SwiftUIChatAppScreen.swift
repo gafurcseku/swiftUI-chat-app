@@ -25,17 +25,14 @@ class SwiftUIChatAppScreen {
 extension SwiftUIChatAppScreen {
     
     static func tapCell() {
-        SwiftUIChatAppScreen.appScreen.cellButtons.waitForExistence(timeout: 3)
         SwiftUIChatAppScreen.appScreen.cellButtons.tap()
     }
     
     static func tapQRCode() {
-        SwiftUIChatAppScreen.appScreen.goQrCode.waitForExistence(timeout: 3)
         SwiftUIChatAppScreen.appScreen.goQrCode.tap()
     }
     
     static func tapBackQRCode() {
-        SwiftUIChatAppScreen.appScreen.backQrCode.waitForExistence(timeout: 3)
         SwiftUIChatAppScreen.appScreen.backQrCode.tap()
     }
     

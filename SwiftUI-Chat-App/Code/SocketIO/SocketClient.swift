@@ -26,7 +26,7 @@ class SocketClient {
     /// - Parameter complete: A closure to be called when the connection is established.
     func socketConnection(complete: @escaping (Bool) -> Void) {
         if let socketURL = URL(string: Bundle.main.infoDictionary?["SocketUrl"] as? String  ?? "") {
-            let config: SocketIOClientConfiguration = [.log(true), .forceWebsockets(true), .secure(true)]
+            let config: SocketIOClientConfiguration = [.log(true), .compress]
             manager = SocketManager(socketURL: socketURL, config: config)
             socket = manager?.defaultSocket
             
@@ -51,12 +51,29 @@ class SocketClient {
         }
     }
     
+    /// Adds event listeners to the specified chat room for receiving real-time events.
+    /// - Parameter chatRoom: The identifier of the chat room to listen for events.
+    /// - Note: This function assumes that the socket is already connected.
+    func addEventListeners(chatRoom: String) {
+        // Check if the socket is connected
+        if let socket = self.socket, socket.status == .connected {
+            // Add an event listener for the specified chat room
+            socket.on(chatRoom) { data, _ in
+                // Handle received event data (e.g., print or process data)
+                print("client => received event: \(data)")
+            }
+        }
+    }
+
+    
     /// Sends a message to the specified chat room.
     /// - Parameters:
     ///   - chatRoom: The identifier of the chat room.
     ///   - message: The message to be sent.
     func sendMessage(chatRoom: String, message: String) {
         if let socket = self.socket, socket.status == .connected {
+            let data = ["color": "#4D55F0", "row": "1", "col": "0", "namespace": "namespace_1"] as [String : Any]
+            socket.emit("user-Selection", data)
             socket.emitWithAck(chatRoom, message).timingOut(after: 0) { data in
                 // Handle acknowledgment data if necessary
             }

@@ -1,10 +1,3 @@
-//
-//  SwiftUIChatAppUITests.swift
-//  SwiftUI-Chat-AppUITests
-//
-//  Created by Md Abdul Gafur on 10/3/24.
-//
-
 import XCTest
 
 class SwiftUIChatAppUITests: XCTestCase {
@@ -20,7 +13,6 @@ class SwiftUIChatAppUITests: XCTestCase {
     }
     
     func testSendMessage() throws {
-       
         SwiftUIChatAppScreen.tapCell()
         SwiftUIChatAppScreen.sendMessage()
     }

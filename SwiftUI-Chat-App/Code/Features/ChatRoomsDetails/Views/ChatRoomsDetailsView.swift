@@ -92,8 +92,8 @@ struct ChatRoomsDetailsView: View {
                         )
                         .accessibilityIdentifier("message_textField")
                     Button(action: {
-                        self.message = ""
                         viewModels.sendMessage(chatRooms: person.getChannelName, message: self.message)
+                        self.message = ""
                     }) {
                         Image("send_message_icon")
                     }
@@ -113,7 +113,7 @@ struct ChatRoomsDetailsView: View {
         .navigationBarBackButtonHidden(true)
         .onAppear {
             viewModels.getChatHistory(chatId: String(person.getID))
-            viewModels.setSocketConnection()
+            viewModels.setSocketConnection(chatRooms: person.getChannelName)
         }
     }
 }

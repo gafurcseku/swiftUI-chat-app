@@ -31,10 +31,11 @@ class ChatRoomDetailsViewModels: BaseViewModel {
     }
     
     /// Sets up the socket connection.
-    func setSocketConnection() {
+    func setSocketConnection(chatRooms: String) {
         socketIO.socketConnection { isSuccess in
             self.isSocketConnected = isSuccess
         }
+        socketIO.addEventListeners(chatRoom: chatRooms)
     }
     
     /// Sends a message to the specified chat room.
