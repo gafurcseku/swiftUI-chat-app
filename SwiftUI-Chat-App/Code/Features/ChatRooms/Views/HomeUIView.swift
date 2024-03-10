@@ -53,6 +53,7 @@ struct HomeUIView: View {
                                     }
                                 }
                             }
+                            .accessibilityIdentifier("cell_\(index)")
                         }
                     }
                 }

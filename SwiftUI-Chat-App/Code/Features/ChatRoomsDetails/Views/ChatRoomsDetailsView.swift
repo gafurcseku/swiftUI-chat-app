@@ -23,12 +23,14 @@ struct ChatRoomsDetailsView: View {
                     .onTapGesture {
                         presentationMode.wrappedValue.dismiss()
                     }
+                    .accessibilityIdentifier("back_button")
                 Text(person.getFullName)
                     .modifier(PTSansBoldTextModifier(fontSize: 22))
                 Spacer()
                 NavigationLink(destination: QRCodeView(person: person)) {
                     Image("qr_code_icon")
                 }
+                .accessibilityIdentifier("go_qrCode")
             }
             Divider()
             
@@ -88,12 +90,14 @@ struct ChatRoomsDetailsView: View {
                             RoundedRectangle(cornerRadius: 40)
                                 .stroke(Color.colorDDDDDD)
                         )
+                        .accessibilityIdentifier("message_textField")
                     Button(action: {
                         self.message = ""
                         viewModels.sendMessage(chatRooms: person.getChannelName, message: self.message)
                     }) {
                         Image("send_message_icon")
                     }
+                    .accessibilityIdentifier("message_send")
                 }
                 .padding(.top, 15)
                 

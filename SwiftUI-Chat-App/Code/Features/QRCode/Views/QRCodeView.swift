@@ -12,7 +12,7 @@ struct QRCodeView: View {
         VStack(alignment: .center) {
             // Header title view
             HeaderTitleView(text: "QR Code")
-            
+                .accessibilityIdentifier("back_qr_code")
             VStack {
                 VStack(alignment: .center) {
                     // User's full name
