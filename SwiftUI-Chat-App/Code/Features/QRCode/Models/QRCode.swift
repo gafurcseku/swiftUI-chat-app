@@ -1,10 +1,3 @@
-//
-//  QRCode.swift
-//  SwiftUI-Chat-App
-//
-//  Created by Md Abdul Gafur on 7/3/24.
-//
-
 import Foundation
 struct QRCode : Codable {
     let status : Bool?

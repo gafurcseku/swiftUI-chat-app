@@ -1,17 +1,13 @@
-//
-//  ChatRoomsDetailsAPIEndPoint.swift
-//  SwiftUI-Chat-App
-//
-//  Created by Md Abdul Gafur on 7/3/24.
-//
-
 import Foundation
 import Alamofire
 
-enum ChatRoomsDetailsAPIEndPoint : ChatAppEndpoint {
+/// Enum defining various API endpoints related to chat room details.
+enum ChatRoomsDetailsAPIEndPoint: ChatAppEndpoint {
     
-    case getHistory(chatId:String)
+    /// Endpoint for fetching chat history for a specific chat ID.
+    case getHistory(chatId: String)
     
+    /// HTTP method associated with the endpoint.
     var method: Alamofire.HTTPMethod {
         switch self {
         case .getHistory:
@@ -19,6 +15,7 @@ enum ChatRoomsDetailsAPIEndPoint : ChatAppEndpoint {
         }
     }
     
+    /// Path of the endpoint.
     var path: String {
         switch self {
         case .getHistory:
@@ -26,12 +23,12 @@ enum ChatRoomsDetailsAPIEndPoint : ChatAppEndpoint {
         }
     }
     
-    var query: [String : Any] {
+    /// Query parameters associated with the endpoint.
+    var query: [String: Any] {
         switch self {
         case .getHistory(let chatId):
-            return ["chat_id":chatId]
+            return ["chat_id": chatId]
         }
     }
-    
-    
 }
+

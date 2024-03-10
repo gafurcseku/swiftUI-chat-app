@@ -1,10 +1,3 @@
-//
-//  Text+ViewModifier.swift
-//  SwiftUI-Chat-App
-//
-//  Created by Md Abdul Gafur on 6/3/24.
-//
-
 import SwiftUI
 
 struct PTSansRegularTextModifier : ViewModifier {

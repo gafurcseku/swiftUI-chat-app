@@ -48,7 +48,7 @@ private func view(for phase: AsyncImagePhase) -> some View {
            image
                .resizable()
                .aspectRatio(contentMode: .fit)
-       case .failure(let error):
+       case .failure(_):
            VStack(spacing: 16) {
                Image(systemName: "xmark.octagon.fill")
                    .foregroundColor(.red)

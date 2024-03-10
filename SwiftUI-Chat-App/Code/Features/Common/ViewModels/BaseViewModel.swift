@@ -1,12 +1,7 @@
-//
-//  BaseViewModel.swift
-//  SwiftUI-Chat-App
-//
-//  Created by Md Abdul Gafur on 6/3/24.
-//
+import SwiftUI
 
-import Foundation
-
+/// Base class for view models providing basic functionality and conforming to the ObservableObject protocol.
 class BaseViewModel: ObservableObject {
     
 }
+

@@ -1,11 +1,3 @@
-//
-//  Messages.swift
-//  SwiftUI-Chat-App
-//
-//  Created by Md Abdul Gafur on 7/3/24.
-//
-
-
 import Foundation
 struct Messages : Codable {
     let id : Int?

@@ -1,10 +1,3 @@
-//
-//  HistoryData.swift
-//  SwiftUI-Chat-App
-//
-//  Created by Md Abdul Gafur on 7/3/24.
-//
-
 import Foundation
 struct HistoryData : Codable {
     let data : [Messages]?

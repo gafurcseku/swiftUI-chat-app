@@ -1,17 +1,13 @@
-//
-//  ChatRoomsAPIEndPoint.swift
-//  SwiftUI-Chat-App
-//
-//  Created by Md Abdul Gafur on 6/3/24.
-//
-
 import Foundation
 import Alamofire
 
-enum ChatRoomsAPIEndPoint : ChatAppEndpoint {
+/// Enum defining endpoints related to chat rooms for the ChatApp API.
+enum ChatRoomsAPIEndPoint: ChatAppEndpoint {
     
+    /// Endpoint for fetching chat rooms.
     case Chat_Rooms
     
+    /// HTTP method associated with each endpoint.
     var method: Alamofire.HTTPMethod {
         switch self {
         case .Chat_Rooms:
@@ -19,6 +15,7 @@ enum ChatRoomsAPIEndPoint : ChatAppEndpoint {
         }
     }
     
+    /// Path of the API endpoint.
     var path: String {
         switch self {
         case .Chat_Rooms:
@@ -26,12 +23,12 @@ enum ChatRoomsAPIEndPoint : ChatAppEndpoint {
         }
     }
     
-    var query: [String : Any] {
+    /// Query parameters for the API endpoint.
+    var query: [String: Any] {
         switch self {
         case .Chat_Rooms:
-            return [String:Any]()
+            return [:] // No query parameters for this endpoint
         }
     }
-    
-    
 }
+

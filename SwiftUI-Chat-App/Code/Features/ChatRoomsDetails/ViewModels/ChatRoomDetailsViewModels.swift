@@ -1,38 +1,48 @@
-//
-//  ChatRoomDetailsViewModels.swift
-//  SwiftUI-Chat-App
-//
-//  Created by Md Abdul Gafur on 7/3/24.
-//
-
 import SwiftUI
 
-class ChatRoomDetailsViewModels : BaseViewModel {
+/// View model class for managing the details of a chat room.
+class ChatRoomDetailsViewModels: BaseViewModel {
+    /// Shared instance of SocketClient for handling socket connections.
     let socketIO = SocketClient.shared
-    @Published var messages:[Messages] = []
-    @Published var chatRoomFail:Bool = false
-    @Published var isSocketConnected:Bool = false
     
-    func getChatHistory(chatId:String) {
+    /// Published property holding the array of messages in the chat room.
+    @Published var messages: [Messages] = []
+    
+    /// Published property indicating whether fetching chat history failed.
+    @Published var chatHistoryFail: Bool = false
+    
+    /// Published property indicating the status of the socket connection.
+    @Published var isSocketConnected: Bool = false
+    
+    /// Fetches the chat history for the given chat ID.
+    /// - Parameter chatId: The ID of the chat room.
+    func getChatHistory(chatId: String) {
         ChatRoomsDetailsService().getHistory(chatId: chatId) { result in
             switch result {
             case .success(let messages):
+                // Sorting messages by their IDs before assigning
                 self.messages = messages.sorted(by: { message1, message2 in
                     message1.getId < message2.getId
                 })
-            case .failure( _, _):
-                self.chatRoomFail = true
+            case .failure(_, _):
+                self.chatHistoryFail = true
             }
         }
     }
     
-    func setSocketConnection(){
+    /// Sets up the socket connection.
+    func setSocketConnection() {
         socketIO.socketConnection { isSuccess in
             self.isSocketConnected = isSuccess
         }
     }
     
-    func sendMessage(chatRooms:String,message:String){
+    /// Sends a message to the specified chat room.
+    /// - Parameters:
+    ///   - chatRooms: The name of the chat room.
+    ///   - message: The message to be sent.
+    func sendMessage(chatRooms: String, message: String) {
         socketIO.sendMessage(chatRoom: chatRooms, message: message)
     }
 }
+

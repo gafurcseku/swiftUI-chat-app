@@ -8,21 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		0942E6942B96C1180069D3B3 /* SwiftUI_Chat_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E6932B96C1180069D3B3 /* SwiftUI_Chat_AppApp.swift */; };
-		0942E6962B96C1180069D3B3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E6952B96C1180069D3B3 /* ContentView.swift */; };
 		0942E6982B96C1190069D3B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0942E6972B96C1190069D3B3 /* Assets.xcassets */; };
 		0942E69B2B96C1190069D3B3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0942E69A2B96C1190069D3B3 /* Preview Assets.xcassets */; };
 		0942E6A52B96C5A50069D3B3 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E6A32B96C5A50069D3B3 /* APIClient.swift */; };
 		0942E6A62B96C5A50069D3B3 /* QUEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E6A42B96C5A50069D3B3 /* QUEndpoint.swift */; };
 		0942E6A92B96C62A0069D3B3 /* ApplicationUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E6A82B96C62A0069D3B3 /* ApplicationUserDefault.swift */; };
 		0942E6B52B978A3E0069D3B3 /* HomeUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E6B42B978A3E0069D3B3 /* HomeUIView.swift */; };
-		0942E6B72B979B9B0069D3B3 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E6B62B979B9B0069D3B3 /* AppTheme.swift */; };
 		0942E6BB2B979DA40069D3B3 /* DashBoardUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E6BA2B979DA40069D3B3 /* DashBoardUIView.swift */; };
 		0942E6BE2B97A1F00069D3B3 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E6BD2B97A1F00069D3B3 /* BaseViewModel.swift */; };
 		0942E6C22B97A2D20069D3B3 /* ChatRoomsAPIEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E6C12B97A2D20069D3B3 /* ChatRoomsAPIEndPoint.swift */; };
 		0942E6C42B97A6570069D3B3 /* PersonRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E6C32B97A6570069D3B3 /* PersonRowView.swift */; };
 		0942E6CD2B97ABD40069D3B3 /* PTSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0942E6CB2B97ABD40069D3B3 /* PTSans-Regular.ttf */; };
 		0942E6CE2B97ABD40069D3B3 /* PTSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0942E6CC2B97ABD40069D3B3 /* PTSans-Bold.ttf */; };
-		0942E6D02B9809800069D3B3 /* ChatTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E6CF2B9809800069D3B3 /* ChatTextView.swift */; };
 		0942E6D22B981E370069D3B3 /* Rooms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E6D12B981E370069D3B3 /* Rooms.swift */; };
 		0942E6D42B981E4E0069D3B3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E6D32B981E4E0069D3B3 /* User.swift */; };
 		0942E6D62B981F1A0069D3B3 /* RoomsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942E6D52B981F1A0069D3B3 /* RoomsData.swift */; };
@@ -64,14 +61,12 @@
 /* Begin PBXFileReference section */
 		0942E6902B96C1180069D3B3 /* SwiftUI-Chat-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-Chat-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0942E6932B96C1180069D3B3 /* SwiftUI_Chat_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_Chat_AppApp.swift; sourceTree = "<group>"; };
-		0942E6952B96C1180069D3B3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0942E6972B96C1190069D3B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0942E69A2B96C1190069D3B3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0942E6A32B96C5A50069D3B3 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		0942E6A42B96C5A50069D3B3 /* QUEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QUEndpoint.swift; sourceTree = "<group>"; };
 		0942E6A82B96C62A0069D3B3 /* ApplicationUserDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationUserDefault.swift; sourceTree = "<group>"; };
 		0942E6B42B978A3E0069D3B3 /* HomeUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUIView.swift; sourceTree = "<group>"; };
-		0942E6B62B979B9B0069D3B3 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
 		0942E6BA2B979DA40069D3B3 /* DashBoardUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardUIView.swift; sourceTree = "<group>"; };
 		0942E6BD2B97A1F00069D3B3 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		0942E6C12B97A2D20069D3B3 /* ChatRoomsAPIEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomsAPIEndPoint.swift; sourceTree = "<group>"; };
@@ -79,7 +74,6 @@
 		0942E6C82B97A9AD0069D3B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0942E6CB2B97ABD40069D3B3 /* PTSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PTSans-Regular.ttf"; sourceTree = "<group>"; };
 		0942E6CC2B97ABD40069D3B3 /* PTSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PTSans-Bold.ttf"; sourceTree = "<group>"; };
-		0942E6CF2B9809800069D3B3 /* ChatTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTextView.swift; sourceTree = "<group>"; };
 		0942E6D12B981E370069D3B3 /* Rooms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rooms.swift; sourceTree = "<group>"; };
 		0942E6D32B981E4E0069D3B3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0942E6D52B981F1A0069D3B3 /* RoomsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsData.swift; sourceTree = "<group>"; };
@@ -157,7 +151,6 @@
 				0942E6C52B97A93F0069D3B3 /* Font */,
 				0942E6A12B96C48D0069D3B3 /* Code */,
 				0942E6932B96C1180069D3B3 /* SwiftUI_Chat_AppApp.swift */,
-				0942E6952B96C1180069D3B3 /* ContentView.swift */,
 				0942E6972B96C1190069D3B3 /* Assets.xcassets */,
 				0942E6992B96C1190069D3B3 /* Preview Content */,
 			);
@@ -257,7 +250,6 @@
 			children = (
 				0942E6BC2B97A1DE0069D3B3 /* ViewModels */,
 				0942E6B92B979D820069D3B3 /* Views */,
-				0942E6B82B979BA00069D3B3 /* Theme */,
 				0942E6B02B977EC00069D3B3 /* Screens */,
 			);
 			path = Common;
@@ -266,7 +258,6 @@
 		0942E6B02B977EC00069D3B3 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				0942E6CF2B9809800069D3B3 /* ChatTextView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -293,14 +284,6 @@
 			children = (
 			);
 			path = Utilities;
-			sourceTree = "<group>";
-		};
-		0942E6B82B979BA00069D3B3 /* Theme */ = {
-			isa = PBXGroup;
-			children = (
-				0942E6B62B979B9B0069D3B3 /* AppTheme.swift */,
-			);
-			path = Theme;
 			sourceTree = "<group>";
 		};
 		0942E6B92B979D820069D3B3 /* Views */ = {
@@ -630,11 +613,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0942E6B72B979B9B0069D3B3 /* AppTheme.swift in Sources */,
 				0942E6BB2B979DA40069D3B3 /* DashBoardUIView.swift in Sources */,
 				BC12BCD12B98AAE900FFC824 /* Font+Extensions.swift in Sources */,
 				0942E7032B9961020069D3B3 /* SurfaceViewModifier.swift in Sources */,
-				0942E6962B96C1180069D3B3 /* ContentView.swift in Sources */,
 				0942E6FF2B995CF30069D3B3 /* QRCodeDetails.swift in Sources */,
 				0942E7122B9A3B670069D3B3 /* AlertReportUserView.swift in Sources */,
 				0942E70C2B9A339C0069D3B3 /* RemoteImage.swift in Sources */,
@@ -673,7 +654,6 @@
 				0942E6B52B978A3E0069D3B3 /* HomeUIView.swift in Sources */,
 				0942E6E02B98E7100069D3B3 /* ChatRoomsDetailsView.swift in Sources */,
 				0942E6FB2B98FD600069D3B3 /* QRCodeService.swift in Sources */,
-				0942E6D02B9809800069D3B3 /* ChatTextView.swift in Sources */,
 				0942E70B2B9A339C0069D3B3 /* Shimmer.swift in Sources */,
 				0942E7012B995ECB0069D3B3 /* QRCodeViewModels.swift in Sources */,
 				0942E6E62B98EC7A0069D3B3 /* ChatRoomsDetailsAPIEndPoint.swift in Sources */,

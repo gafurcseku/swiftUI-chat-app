@@ -1,31 +1,33 @@
-//
-//  ApplicationUserDefault.swift
-//  Qurais
-//
-//  Created by Md Abdul Gafur on 13/8/23.
-//
-
 import Foundation
 
+// Constants
 let USER_TOKEN = "user_token"
 
+// Struct to handle UserDefaults operations related to application settings
 struct ApplicationUserDefault {
     
-    static func setBool(value:Bool, key:String){
+    // Set a boolean value in UserDefaults
+    static func setBool(value: Bool, key: String) {
         UserDefaults.standard.set(value, forKey: key)
-        UserDefaults.standard.synchronize()
+        UserDefaults.standard.synchronize() // Ensure immediate synchronization
     }
     
-    static func getBool(key:String) -> Bool {
+    // Retrieve a boolean value from UserDefaults
+    static func getBool(key: String) -> Bool {
         return UserDefaults.standard.bool(forKey: key)
     }
     
-    static func setString(value:String, key:String){
+    // Set a string value in UserDefaults
+    static func setString(value: String, key: String) {
         UserDefaults.standard.set(value, forKey: key)
-        UserDefaults.standard.synchronize()
+        UserDefaults.standard.synchronize() // Ensure immediate synchronization
     }
     
-    static func getString(key:String) -> String {
+    // Retrieve a string value from UserDefaults, returns an empty string if not found
+    static func getString(key: String) -> String {
         return UserDefaults.standard.string(forKey: key) ?? ""
     }
 }
+
+
+

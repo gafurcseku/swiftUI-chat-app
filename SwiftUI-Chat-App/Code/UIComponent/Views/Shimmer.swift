@@ -16,7 +16,7 @@ public struct Shimmer {
 
         public var body: some View {
             Rectangle()
-                .foregroundColor(Color(ColorSet.colorDDDDDD.rawValue))
+                .foregroundColor(Color.colorDDDDDD)
                 .modifier(ShimmerModifier())
         }
     }
@@ -28,7 +28,7 @@ public struct Shimmer {
 
         public var body: some View {
             Rectangle()
-                .foregroundColor(Color(ColorSet.colorDDDDDD.rawValue))
+                .foregroundColor(Color.colorDDDDDD)
                 .modifier(ShimmerModifier())
                 //.modifier(GLShapeViewModifier(shape: theme.shapes.cards.defaultCard))
         }
@@ -54,7 +54,7 @@ public struct Shimmer {
         public var body: some View {
             Circle()
                 .frame(width: size.rawValue, height: size.rawValue)
-                .foregroundColor(Color(ColorSet.colorDDDDDD.rawValue))
+                .foregroundColor(Color.colorDDDDDD)
                 .modifier(ShimmerModifier())
                // .modifier(GLShapeViewModifier(shape: theme.shapes.cards.elevated))
         }

@@ -1,30 +1,39 @@
-//
-//  CustomAlert.swift
-//  SwiftUI-Chat-App
-//
-//  Created by Md Abdul Gafur on 7/3/24.
-//
-
 import SwiftUI
 
-struct CustomAlert<Content> : View where Content : View {
+/// A customizable alert view with options for positive and negative actions.
+struct CustomAlert<Content>: View where Content: View {
+    /// Binding to control the visibility of the alert.
     @Binding var showAlert: Bool
-    var negativeText:String = "CANCEL"
-    var positiveText:String = "OK"
     
+    /// Text for the negative action button.
+    var negativeText: String = "CANCEL"
+    
+    /// Text for the positive action button.
+    var positiveText: String = "OK"
+    
+    /// Content of the alert, typically containing the alert message and additional views.
     @ViewBuilder let content: Content
+    
+    /// Action to perform when the negative button is tapped.
     var negativeButtonAction: (() -> ())?
+    
+    /// Action to perform when the positive button is tapped.
     var positiveButtonAction: (() -> ())?
     
     var body: some View {
         ZStack {
+            // Overlay to dim the background when the alert is presented
             Color.black.opacity(0.58)
                 .edgesIgnoringSafeArea(.all)
                 .onTapGesture {
                     self.showAlert.toggle()
                 }
+            
             VStack(spacing: 0) {
+                // Content of the alert
                 content
+                
+                // Buttons for negative and positive actions
                 HStack(spacing: 21) {
                     Spacer()
                     Button(action: {
@@ -32,7 +41,7 @@ struct CustomAlert<Content> : View where Content : View {
                             self.showAlert.toggle()
                         }
                         negativeButtonAction?()
-                    }){
+                    }) {
                         Text(negativeText)
                             .modifier(PTSansRegularTextModifier(fontSize: 16))
                             .foregroundColor(.black)
@@ -43,47 +52,20 @@ struct CustomAlert<Content> : View where Content : View {
                             self.showAlert.toggle()
                         }
                         positiveButtonAction?()
-                    }){
+                    }) {
                         Text(positiveText)
                             .modifier(PTSansRegularTextModifier(fontSize: 16))
                             .foregroundColor(.red)
                     }
                 }
                 .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 40)
-                
             }
             .padding([.leading, .trailing], Padding.p25.rawValue)
-            .padding(.top,Padding.p50.rawValue)
-            .padding(.bottom,Padding.p25.rawValue)
+            .padding(.top, Padding.p50.rawValue)
+            .padding(.bottom, Padding.p25.rawValue)
             .background(Color.white)
-            .padding([.leading,.trailing],25)
-            
+            .padding([.leading, .trailing], 25)
         }
-        .zIndex(2)
-    }
-}
-
-
-#Preview {
-    CustomAlert(showAlert:.constant(false),positiveText: "BLOCK"){
-        VStack(alignment: .leading,spacing: 15){
-            HStack(spacing:10){
-                Image("block_user_icon")
-                Text("Block User")
-                    .modifier(PTSansBoldTextModifier(fontSize: 30))
-                    .foregroundColor(.black)
-            }
-            HStack(spacing:15){
-                RemoteImage.CircleImage()
-                    .frame(width: 50,height: 50)
-                Text("Susan D. Fairchild")
-                    .modifier(PTSansBoldTextModifier(fontSize: 22))
-                    .foregroundColor(.black)
-            }
-            
-            Text("Are you sure you want to block this user? Once blocked they won’t be able to send you messages and won’t be able to match in future.")
-                .modifier(PTSansRegularTextModifier(fontSize: 16))
-                .foregroundColor(.black)
-        }
+        .zIndex(2) // Ensure the alert is displayed above other views
     }
 }

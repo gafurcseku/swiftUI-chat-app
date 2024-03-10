@@ -1,17 +1,13 @@
-//
-//  QRCodeAPIEndPoint.swift
-//  SwiftUI-Chat-App
-//
-//  Created by Md Abdul Gafur on 7/3/24.
-//
-
 import Foundation
 import Alamofire
 
-enum QRCodeAPIEndPoint : ChatAppEndpoint {
+/// Enum defining various API endpoints related to QR code operations.
+enum QRCodeAPIEndPoint: ChatAppEndpoint {
     
-    case getQRCode(chatId:String)
+    /// Endpoint for fetching QR code for a specific chat ID.
+    case getQRCode(chatId: String)
     
+    /// HTTP method associated with the endpoint.
     var method: Alamofire.HTTPMethod {
         switch self {
         case .getQRCode:
@@ -19,6 +15,7 @@ enum QRCodeAPIEndPoint : ChatAppEndpoint {
         }
     }
     
+    /// Path of the endpoint.
     var path: String {
         switch self {
         case .getQRCode:
@@ -26,12 +23,12 @@ enum QRCodeAPIEndPoint : ChatAppEndpoint {
         }
     }
     
-    var query: [String : Any] {
+    /// Query parameters associated with the endpoint.
+    var query: [String: Any] {
         switch self {
         case .getQRCode(let chatId):
-            return ["chat_id":chatId]
+            return ["chat_id": chatId]
         }
     }
-    
-    
 }
+

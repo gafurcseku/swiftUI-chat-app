@@ -1,10 +1,3 @@
-//
-//  ShimmerModifier.swift
-//  SwiftUI-Chat-App
-//
-//  Created by RootNext15 on 6/3/24.
-//
-
 import SwiftUI
 
 public extension View {

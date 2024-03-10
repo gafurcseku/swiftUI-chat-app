@@ -1,10 +1,3 @@
-//
-//  Historys.swift
-//  SwiftUI-Chat-App
-//
-//  Created by Md Abdul Gafur on 7/3/24.
-//
-
 import Foundation
 struct Historys : Codable {
     let status : Bool?
